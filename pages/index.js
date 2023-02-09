@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 
+//Componentes
+import Navbar from "@/components/Navbar/Index";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -14,8 +17,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
+        <Navbar />
         <div>
-          <h1>Hola</h1>
+          <h1 className='text-red-400'>Hola</h1>
         </div>
       </main>
     </>
