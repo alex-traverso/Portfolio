@@ -7,8 +7,6 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner/index";
 import Footer from "@/components/Footer/index";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
     <>
@@ -16,12 +14,12 @@ export default function Home() {
         <title>Traverso Alex Portfolio</title>
         <meta name='description' content='Traverso Alex Portfolio' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/logo.png' />
       </Head>
       <main>
         <Header />
-        {/* <Banner /> */}
-        {/* <Footer /> */}
+        <Banner />
+        <Footer />
       </main>
     </>
   );
