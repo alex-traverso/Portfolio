@@ -19,6 +19,7 @@ module.exports = {
       padding: {
         sectionTop: "50px",
         sectionBottom: "75px",
+        sectionSides: "11rem",
       },
     },
   },
