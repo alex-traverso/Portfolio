@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Banner from "@/components/Banner/index";
 import Footer from "@/components/Footer/index";
 import Skills from "@/components/Skills";
+import Contact from "@/components/Contact";
 
 import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
@@ -30,7 +31,8 @@ export default function Home() {
         <Banner />
         <SocialMedia />
         <AboutMe />
-        {/* <Skills /> */}
+        <Skills />
+        <Contact />
         <Footer />
       </main>
     </>

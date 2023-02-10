@@ -1,13 +1,67 @@
+import Card from "../Card";
+import Titles from "../Titles";
+
 export default function Skills() {
   return (
     <>
-      <div className=' bg-dark flex flex-col justify-center items-center'>
-        <h2 className='text-white'>Skills</h2>
-        <div className='duration-400 text-white relative flex md:min-h-[286px] max-w-[346px] cursor-pointer flex-col items-center gap-4 rounded-xl border border-indigo-300/50 p-6 shadow-inner transition-all hover:-translate-y-2 hover:bg-indigo-300/50 dark:border-zinc-700/40 dark:shadow-zinc-700/40 dark:hover:bg-zinc-600/30 dark:hover:shadow-transparent'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia placeat
-          velit dignissimos eligendi ipsam aliquid recusandae accusantium
-          aperiam amet magnam, enim iste nam eaque tempora provident nemo
-          nostrum a accusamus.
+      <div className='px-sectionSides pt-sectionTop pb-sectionBottom bg-dark flex flex-col justify-center items-center'>
+        <Titles>HABILIDADES</Titles>
+
+        <div className='flex flex-wrap justify-center items-center gap-6 w-[70vw]'>
+          <Card
+            src='/html.svg'
+            alt='HTML'
+            title='HTML'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/css.svg'
+            alt='CSS'
+            title='CSS'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/javascript.svg'
+            alt='Javascript'
+            title='Javascript'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/reactJs.svg'
+            alt='React Js'
+            title='React Js'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/nextJs.svg'
+            alt='Next Js'
+            title='Next Js'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/git.svg'
+            alt='Git'
+            title='Git'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/firebase.svg'
+            alt='Firebase'
+            title='Firebase'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/bootstrap.svg'
+            alt='Bootstrap'
+            title='Bootstrap'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
+          <Card
+            src='/tailwind.svg'
+            alt='Talwind'
+            title='Talwind'
+            description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
+          ></Card>
         </div>
       </div>
     </>
