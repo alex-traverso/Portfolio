@@ -31,7 +31,7 @@ export default function Home() {
         <SocialMedia />
         <AboutMe />
         {/* <Skills /> */}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );

@@ -21,7 +21,7 @@ export default function Header() {
           className='hover:text-lightBlue transition-all tracking-wide'
           href='#'
         >
-          Sobre mí
+          Sobre Mí
         </Link>
         <Link
           className='hover:text-lightBlue transition-all tracking-wide'
