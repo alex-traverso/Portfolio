@@ -12,8 +12,13 @@ module.exports = {
     extend: {
       colors: {
         darkGrey: "#171717",
+        lightGrey: "#BDBDBD",
         dark: "#0F0F0F",
         lightBlue: "#4399CE",
+      },
+      padding: {
+        sectionTop: "50px",
+        sectionBottom: "75px",
       },
     },
   },

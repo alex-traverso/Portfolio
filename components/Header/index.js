@@ -4,7 +4,7 @@ import profilePic from "public/logo.png";
 
 export default function Header() {
   return (
-    <header className='flex fixed top-0 z-10 h-20 w-screen justify-between items-center bg-darkGrey px-20 py-10'>
+    <header className='flex fixed top-0 z-50 h-20 w-full justify-between items-center bg-darkGrey px-20 py-10'>
       <div className=' max-w-sm'>
         <Link href={"/"}>
           <Image src={profilePic} alt='Logo' width={40} height={45} />
