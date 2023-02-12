@@ -8,7 +8,7 @@ export default function ProjectGallery() {
           <Project
             title='Devter'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/Devter.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
@@ -18,27 +18,27 @@ export default function ProjectGallery() {
           <Project
             title='toDoList'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/ToDoList.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl '>
+        <div className='rounded-lg shadow-xl '>
           <Project
             title='ProductList'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/ProductList.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl '>
+        <div className='rounded-lg shadow-xl '>
           <Project
             title='product hunt'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/ProductHunt.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
@@ -48,37 +48,37 @@ export default function ProjectGallery() {
           <Project
             title='Memorama'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/Memorama.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl '>
+        <div className='rounded-lg shadow-xl '>
           <Project
             title='Landing Page'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/LandingPage.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl  col-span-2'>
+        <div className='rounded-lg shadow-xl  col-span-2'>
           <Project
             title='Dona sangre'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/DonaSangre.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl col-span-2'>
+        <div className='rounded-lg shadow-xl col-span-2'>
           <Project
             title='Calculadora'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/Calculadora.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
@@ -88,7 +88,7 @@ export default function ProjectGallery() {
           <Project
             title='Poker Api'
             description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='a.jpg'
+            src='/ProjectsCover/PokemonApi.png'
             alt=''
             github='https://www.github.com'
             url='https://www.google.com'
