@@ -1,13 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Roboto } from "@next/font/google";
 
 //Componentes
 import Header from "@/components/Header";
 import Banner from "@/components/Banner/index";
-import Footer from "@/components/Footer/index";
 import Skills from "@/components/Skills";
+import Services from "@/components/ServicesComp";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer/index";
 
 import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
@@ -32,6 +33,8 @@ export default function Home() {
         <SocialMedia />
         <AboutMe />
         <Skills />
+        {/* <Services /> */}
+        <Projects />
         <Contact />
         <Footer />
       </main>

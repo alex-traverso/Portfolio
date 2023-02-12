@@ -6,7 +6,7 @@ import Linkedin from "../Icons/Linkedin/index";
 export default function SocialMedia() {
   return (
     <>
-      <div className='flex flex-col justify-end items-center fixed bottom-0 left-6 gap-6 h-2/6'>
+      <div className='flex flex-col justify-end items-center fixed bottom-0 left-12 gap-6 h-2/6'>
         <a
           target='_blank'
           rel='noreferrer'
@@ -14,8 +14,8 @@ export default function SocialMedia() {
         >
           <Instagram
             className='hover:fill-lightBlue transition-all'
-            width={30}
-            height={30}
+            width={20}
+            height={20}
             fill='#fff'
           />
         </a>
@@ -26,8 +26,8 @@ export default function SocialMedia() {
         >
           <Github
             className='hover:stroke-lightBlue transition-all'
-            width={30}
-            height={30}
+            width={20}
+            height={20}
             stroke='#fff'
           />
         </a>
@@ -39,8 +39,8 @@ export default function SocialMedia() {
         >
           <Linkedin
             className='hover:fill-lightBlue transition-all'
-            width={30}
-            height={30}
+            width={20}
+            height={20}
             fill='#fff'
           />
         </a>
