@@ -6,25 +6,21 @@ import Button from "../Button";
 export default function AboutMe() {
   return (
     <>
-      <div className='px-sectionSides pt-sectionTop pb-sectionBottom bg-darkGrey flex justify-center h-auto items-center self-center flex-col'>
+      <div className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey flex justify-center h-auto items-center self-center flex-col'>
         <Titles>SOBRE MÍ</Titles>
-        <div className='flex justify-between gap-16 transition-all'>
-          <div className='relative w-[450px] flex items-center'>
-            <div className='absolute right-0 border-2 h-[360px] w-[400px] z-20 border-lightBlue'></div>
-
-            <div className='relative'>
-              <div className='absolute right-0 top-0 border-2 w-40 z-20 border-lightBlue'></div>
-              <div className='absolute left-0 bottom-0 border-2 w-60  z-20 border-lightBlue'></div>
-              <Image
-                className=' w-[400px] h-[450px] object-cover object-top'
-                src={profile}
-                alt='Logo'
-              />
-            </div>
+        <div className='flex lg:flex-row lg:justify-between gap-16 transition-all m:flex-col m:justify-center m:items-center'>
+          <div className='lg:w-[450px] xs:w-[350px] flex items-center'>
+            <Image
+              className=' lg:w-[400px] lg:h-[450px] object-cover object-top'
+              src={profile}
+              alt='Logo'
+            />
           </div>
-          <div className='text-white w-[600px]'>
-            <h2 className='font-medium text-4xl mb-2'>Alex Traverso</h2>
-            <div className=' my-6'>
+          <div className='text-white xl:w-[600px] lg:w-[400px] xs:w-[300px]'>
+            <h2 className='font-medium lg:text-left xl:text-4xl mb-2  m:text-center m:text-3xl'>
+              Alex Traverso
+            </h2>
+            <div className='my-6'>
               <p>
                 ¡Hola! Mi nombre es Alex Traverso y soy un Desarrollador Front
                 End. Soy una persona apasionada por el mundo del desarrollo y

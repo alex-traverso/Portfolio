@@ -20,7 +20,12 @@ module.exports = {
       padding: {
         sectionTop: "50px",
         sectionBottom: "75px",
-        sectionSides: "11rem",
+        sectionSides: "10rem",
+        sectionSidesMobile: "3rem",
+      },
+      screens: {
+        m: "375px",
+        xs: "480px",
       },
     },
   },
