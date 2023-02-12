@@ -3,95 +3,105 @@ import Project from "../Project";
 export default function ProjectGallery() {
   return (
     <>
-      <div className='grid grid-cols-4 grid-rows-4 gap-x-2 gap-y-3 h-[45rem]'>
-        <div className=' rounded-lg shadow-xl  row-span-2 col-span-2'>
+      <div className='grid grid-cols-4 grid-rows-4 gap-x-2 gap-y-3 h-[60rem] w-[70vw]'>
+        <div className='rounded-lg shadow-xl row-span-2 col-span-2'>
           <Project
             title='Devter'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            description='Clon de Twitter, con funcionalidades como realizar un tweet, comentar e interactuar con otros tweets.'
             src='/ProjectsCover/Devter.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
+            alt='Devter'
+            github='https://github.com/alex-traverso/devter'
+            url='https://devter-steel.vercel.app/home'
+            tech='Next Js'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl  row-span-2 '>
+        <div className='rounded-lg shadow-xl col-span-2'>
           <Project
-            title='toDoList'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='/ProjectsCover/ToDoList.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
-          ></Project>
-        </div>
-        <div className='rounded-lg shadow-xl '>
-          <Project
-            title='ProductList'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            title='Lista de productos'
+            description='CRUD de lista de productos, en las que el usuario puede subir, ver, editar y eliminar productos'
             src='/ProjectsCover/ProductList.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
+            alt='Lista de productos'
+            github='https://github.com/alex-traverso/product-list'
+            url='https://product-list-redux.netlify.app/'
+            tech='React Js, Redux'
           ></Project>
         </div>
         <div className='rounded-lg shadow-xl '>
           <Project
-            title='product hunt'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            title='Product Hunt Clon'
+            description='Clon de Product Hunt, en la que el usuario puede subir sus productos, realizar comentarios y votar sobre productos de otros usuarios.'
             src='/ProjectsCover/ProductHunt.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
+            alt='Product Hunt Clon'
+            github='https://github.com/alex-traverso/producthuntnext'
+            url='https://producthuntnext-two.vercel.app/'
+            tech='Next Js'
           ></Project>
         </div>
-        <div className=' rounded-lg shadow-xl  row-span-2'>
+        <div className='rounded-lg shadow-xl '>
+          <Project
+            title='Lista de notas'
+            description='Aplicación para poder crear y borrar notas.'
+            src='/ProjectsCover/ToDoList.png'
+            alt='Lista de notas'
+            github='https://github.com/alex-traverso/Add-notes'
+            url='https://codesandbox.io/s/github/alex-traverso/Todo-list'
+            tech='Next Js'
+          ></Project>
+        </div>
+        <div className='rounded-lg shadow-xl'>
+          <Project
+            title='Pokemon Api'
+            description='Aplicación para ver una Lista de todos los Pokemones existentes.'
+            src='/ProjectsCover/PokemonApi.png'
+            alt='Pokemon Api'
+            github='https://github.com/alex-traverso/Pokemon-Api'
+            url='https://alex-traverso.github.io/Pokemon-Api/'
+            tech='HTML, CSS, Javascript'
+          ></Project>
+        </div>
+        <div className='rounded-lg shadow-xl col-span-2'>
+          <Project
+            title='Dona sangre'
+            description='Rediseño de sitio web de ONG "Dona Sangre". '
+            src='/ProjectsCover/DonaSangre.png'
+            alt='Dona sangre'
+            github='https://github.com/alex-traverso/Dona-sangre'
+            url='https://donando-sangre.netlify.app/'
+            tech='HTML, CSS, Javascript, Jquery'
+          ></Project>
+        </div>
+        <div className='rounded-lg shadow-xl row-span-2'>
+          <Project
+            title='Calculadora'
+            description='Calculadora con múltiples operaciones.'
+            src='/ProjectsCover/Calculadora.png'
+            alt='Calculadora'
+            github='https://github.com/alex-traverso/Calculator-App'
+            url='https://alex-traverso.github.io/Calculator-App/'
+            tech='React Js'
+          ></Project>
+        </div>
+
+        <div className=' rounded-lg shadow-xl  col-span-2'>
           <Project
             title='Memorama'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            description='Juego de memoria en la que hay que encontrar las 2 cartas con el mismo emoji para pasar de nivel, aunque también tiene su modo "relajado" para jugarlo sin tiempo ni errores.'
             src='/ProjectsCover/Memorama.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
+            alt='Memorama'
+            github='https://github.com/alex-traverso/Memorama'
+            url='https://alex-traverso.github.io/Memorama/'
+            tech='HTML, CSS, Javascript'
           ></Project>
         </div>
         <div className='rounded-lg shadow-xl '>
           <Project
             title='Landing Page'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            description='Landing page de producto.'
             src='/ProjectsCover/LandingPage.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
-          ></Project>
-        </div>
-        <div className='rounded-lg shadow-xl  col-span-2'>
-          <Project
-            title='Dona sangre'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='/ProjectsCover/DonaSangre.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
-          ></Project>
-        </div>
-        <div className='rounded-lg shadow-xl col-span-2'>
-          <Project
-            title='Calculadora'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='/ProjectsCover/Calculadora.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
-          ></Project>
-        </div>
-        <div className=' rounded-lg shadow-xl '>
-          <Project
-            title='Poker Api'
-            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
-            src='/ProjectsCover/PokemonApi.png'
-            alt=''
-            github='https://www.github.com'
-            url='https://www.google.com'
+            alt='Landing Page'
+            github='https://github.com/alex-traverso/Product-landing-page'
+            url='https://alex-traverso.github.io/Product-landing-page/'
+            tech='HTML, CSS'
           ></Project>
         </div>
       </div>
