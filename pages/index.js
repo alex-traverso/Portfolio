@@ -33,7 +33,7 @@ export default function Home() {
         <SocialMedia />
         <AboutMe />
         <Skills />
-        {/* <Services /> */}
+        <Services />
         <Projects />
         <Contact />
         <Footer />

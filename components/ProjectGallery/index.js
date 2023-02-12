@@ -3,25 +3,97 @@ import Project from "../Project";
 export default function ProjectGallery() {
   return (
     <>
-      <div className='grid grid-cols-3 gap-x-2 gap-y-3 grid-flow-row-dense w-full'>
-        <Project
-          className='bg-red-500 rounded-lg shadow-xl min-h-[250px]'
-          title='Devter'
-          description='Lorem Ipsum'
-          src='a.jpg'
-          alt=''
-          github='https://www.github.com'
-          url='https://www.google.com'
-        ></Project>
-        {/* <Project className='bg-orange-500 rounded-lg shadow-xl min-h-[250px] col-span-3'></Project>
-        <Project className='bg-yellow-500 rounded-lg shadow-xl min-h-[250px] row-span-2 col-span-2'></Project>
-        <Project className='bg-green-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-teal-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-blue-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-indigo-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-purple-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-pink-500 rounded-lg shadow-xl min-h-[250px]'></Project>
-        <Project className='bg-slate-500 rounded-lg shadow-xl min-h-[250px]'></Project> */}
+      <div className='grid grid-cols-4 grid-rows-4 gap-x-2 gap-y-3 h-[45rem]'>
+        <div className=' rounded-lg shadow-xl  row-span-2 col-span-2'>
+          <Project
+            title='Devter'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className='rounded-lg shadow-xl  row-span-2 '>
+          <Project
+            title='toDoList'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl '>
+          <Project
+            title='ProductList'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl '>
+          <Project
+            title='product hunt'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl  row-span-2'>
+          <Project
+            title='Memorama'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl '>
+          <Project
+            title='Landing Page'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl  col-span-2'>
+          <Project
+            title='Dona sangre'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl col-span-2'>
+          <Project
+            title='Calculadora'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
+        <div className=' rounded-lg shadow-xl '>
+          <Project
+            title='Poker Api'
+            description='Lorem Ipsum lorem ipsum dolor sit amet, consectetLorem Ipsum lorem ipsum dolor sit amet, consectet'
+            src='a.jpg'
+            alt=''
+            github='https://www.github.com'
+            url='https://www.google.com'
+          ></Project>
+        </div>
       </div>
     </>
   );
