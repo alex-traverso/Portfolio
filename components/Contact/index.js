@@ -3,7 +3,10 @@ import Button from "../Button";
 
 export default function Contact() {
   return (
-    <div className='flex flex-col justify-center items-center w-full bg-darkGrey pb-sectionBottom pt-sectionTop '>
+    <div
+      id='contact'
+      className='flex flex-col justify-center items-center w-full bg-darkGrey pb-sectionBottom pt-sectionTop '
+    >
       <Titles>CONTACTO</Titles>
       <form
         action=''

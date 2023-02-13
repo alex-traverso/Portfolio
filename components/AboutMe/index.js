@@ -6,7 +6,10 @@ import Button from "../Button";
 export default function AboutMe() {
   return (
     <>
-      <div className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col m:flex m:justify-end m:flex-col '>
+      <div
+        id='aboutMe'
+        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col m:flex m:justify-end m:flex-col '
+      >
         <Titles>SOBRE MÍ</Titles>
         <div className='flex lg:flex-row lg:items-start gap-16 transition-all m:flex-col m:justify-center m:items-center m:w-full'>
           <div className=' rounded-lg m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden '>

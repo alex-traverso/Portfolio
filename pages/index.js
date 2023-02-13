@@ -9,6 +9,7 @@ import Services from "@/components/ServicesComp";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer/index";
+import Nav from "@/components/Nav";
 
 import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
@@ -27,8 +28,9 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.png' />
       </Head>
-      <main className={roboto.className}>
-        <Header />
+      <main className={roboto.className} id='home'>
+        <Nav />
+        {/* <Header /> */}
         <Banner />
         <SocialMedia />
         <AboutMe />

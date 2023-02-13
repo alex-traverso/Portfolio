@@ -4,7 +4,10 @@ import Titles from "../Titles";
 export default function Services() {
   return (
     <>
-      <div className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey flex flex-col justify-center items-center'>
+      <div
+        id='services'
+        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey flex flex-col justify-center items-center'
+      >
         <div>
           <Titles>SERVICIOS</Titles>
         </div>
