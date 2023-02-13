@@ -6,21 +6,22 @@ import Button from "../Button";
 export default function AboutMe() {
   return (
     <>
-      <div className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey flex justify-center h-auto items-center self-center flex-col'>
+      <div className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col m:flex m:justify-end m:flex-col '>
         <Titles>SOBRE MÍ</Titles>
-        <div className='flex lg:flex-row lg:justify-between gap-16 transition-all m:flex-col m:justify-center m:items-center'>
-          <div className='lg:w-[450px] xs:w-[350px] flex items-center'>
+        <div className='flex lg:flex-row lg:items-start gap-16 transition-all m:flex-col m:justify-center m:items-center m:w-full'>
+          <div className=' rounded-lg m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden '>
             <Image
-              className=' lg:w-[400px] lg:h-[450px] object-cover object-top'
+              className='object-cover w-full h-full object-top drop-shadow-md hover:scale-[1.02] duration-[0.3s]'
               src={profile}
               alt='Logo'
             />
           </div>
-          <div className='text-white xl:w-[600px] lg:w-[400px] xs:w-[300px]'>
+          {/* lg:w-[450px] sm:w-[450px] */}
+          <div className=' text-white xl:w-[600px] md:w-[400px] xs:w-[350px] m:w-[300px] '>
             <h2 className='font-medium lg:text-left xl:text-4xl mb-2  m:text-center m:text-3xl'>
               Alex Traverso
             </h2>
-            <div className='my-6'>
+            <div className='my-6 m:text-center lg:text-left'>
               <p>
                 ¡Hola! Mi nombre es Alex Traverso y soy un Desarrollador Front
                 End. Soy una persona apasionada por el mundo del desarrollo y
@@ -40,7 +41,9 @@ export default function AboutMe() {
                 cual pueda colaborar con mis esfuerzos y adquirir experiencia.
               </p>
             </div>
-            <Button>DESCARGAR CV</Button>
+            <div className=' lg:block m:flex m:justify-center'>
+              <Button>DESCARGAR CV</Button>
+            </div>
           </div>
         </div>
       </div>
