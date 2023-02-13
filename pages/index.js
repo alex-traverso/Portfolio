@@ -2,14 +2,13 @@ import Head from "next/head";
 import { Roboto } from "@next/font/google";
 
 //Componentes
-import Header from "@/components/Header";
 import Banner from "@/components/Banner/index";
 import Skills from "@/components/Skills";
 import Services from "@/components/ServicesComp";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer/index";
-import Nav from "@/components/Nav";
+import NavBar from "@/components/NavBar";
 
 import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
@@ -29,8 +28,7 @@ export default function Home() {
         <link rel='icon' href='/logo.png' />
       </Head>
       <main className={roboto.className} id='home'>
-        <Nav />
-        {/* <Header /> */}
+        <NavBar />
         <Banner />
         <SocialMedia />
         <AboutMe />

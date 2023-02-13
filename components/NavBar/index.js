@@ -7,7 +7,7 @@ import Close from "../Icons/Close/index";
 import Image from "next/image";
 import profilePic from "public/logo.png";
 
-const Nav = () => {
+const NavBar = () => {
   let Links = [
     { name: "Sobre Mí", link: "aboutMe" },
     { name: "Habilidades", link: "skills" },
@@ -61,10 +61,9 @@ const Nav = () => {
             )}
           </div>
         </div>
-
         <ul
           className={`m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static bg-lightestGrey md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 transition-all duration-500 ease-in ${
-            open ? "top-20 " : "top-[-490px]"
+            open ? "top-20 " : "top-[-1000px]"
           }`}
         >
           {Links.map((link) => (
@@ -91,4 +90,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default NavBar;
