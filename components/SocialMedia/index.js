@@ -6,14 +6,14 @@ import Linkedin from "../Icons/Linkedin/index";
 export default function SocialMedia() {
   return (
     <>
-      <div className='flex flex-col justify-end items-center fixed bottom-0 z-50 lg:left-12 m:left-5 sm:left-8 gap-6 h-2/6'>
+      <div className='flex flex-col justify-end items-center fixed bottom-0 z-50 lg:left-12 m:left-4 sm:left-8 gap-6 lg:h-2/6 md:h-1/4 m:h-1/5'>
         <a
           target='_blank'
           rel='noreferrer'
           href='https://www.instagram.com/alextraverso/'
         >
           <Instagram
-            className='hover:fill-lightBlue transition-all'
+            className='hover:fill-lightBlue transition-all shadow-md'
             width={20}
             height={20}
             fill='#fff'
@@ -25,7 +25,7 @@ export default function SocialMedia() {
           href='https://github.com/alex-traverso'
         >
           <Github
-            className='hover:stroke-lightBlue transition-all'
+            className='hover:stroke-lightBlue transition-all shadow-md'
             width={20}
             height={20}
             stroke='#fff'
@@ -38,7 +38,7 @@ export default function SocialMedia() {
           href='https://www.linkedin.com/in/alex-traverso'
         >
           <Linkedin
-            className='hover:fill-lightBlue transition-all'
+            className='hover:fill-lightBlue transition-all shadow-md'
             width={20}
             height={20}
             fill='#fff'
@@ -49,9 +49,3 @@ export default function SocialMedia() {
     </>
   );
 }
-/* 
-height:100vh;
- width:.5vw;
- border-width:0;
- color:#000;
- background-color:#000; */

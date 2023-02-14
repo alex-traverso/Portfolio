@@ -6,7 +6,7 @@ export default function Titles({ children }) {
           {children}
         </h2>
 
-        <h2 className='text-lightGrey opacity-30 lg:text-6xl md:text-5xl sm:text-5xl m:text-4xl font-medium absolute center'>
+        <h2 className='text-lightGrey opacity-20 lg:text-6xl md:text-5xl sm:text-5xl m:text-4xl font-medium absolute center'>
           {children}
         </h2>
       </div>
