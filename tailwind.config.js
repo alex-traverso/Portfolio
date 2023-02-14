@@ -21,7 +21,7 @@ module.exports = {
         sectionTop: "50px",
         sectionBottom: "75px",
         sectionSides: "10rem",
-        sectionSidesMobile: "3rem",
+        sectionSidesMobile: "2rem",
       },
       screens: {
         m: "375px",
