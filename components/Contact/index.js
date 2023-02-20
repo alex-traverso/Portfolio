@@ -107,7 +107,9 @@ export default function Contact() {
           <div className='lg:px-3 m:px-2 text-red-500 text-center'>{error}</div>
         ) : null}
 
-        <Button type='submit'>ENVIAR</Button>
+        <Button onClick={handleSubmit} type='submit'>
+          ENVIAR
+        </Button>
       </form>
     </div>
   );
