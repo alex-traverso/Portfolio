@@ -19,7 +19,6 @@ export default function AboutMe() {
               alt='Logo'
             />
           </div>
-          {/* lg:w-[450px] sm:w-[450px] */}
           <div className=' text-white xl:w-[600px] md:w-[400px] xs:w-[350px] m:w-[300px] '>
             <h2 className='font-medium lg:text-left xl:text-4xl mb-2  m:text-center m:text-3xl'>
               Alex Traverso
@@ -45,7 +44,13 @@ export default function AboutMe() {
               </p>
             </div>
             <div className=' lg:block m:flex m:justify-center'>
-              <Button>DESCARGAR CV</Button>
+              <Button
+                href='/Cv Alex Traverso.pdf'
+                target='_blank'
+                rel='noreferrer'
+              >
+                DESCARGAR CV
+              </Button>
             </div>
           </div>
         </div>

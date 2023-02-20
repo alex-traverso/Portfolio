@@ -64,14 +64,14 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static bg-lightestGrey md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 transition-all duration-500 ease-in ${
+          className={`m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static bg-lightestGrey md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-1000px]"
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.name}
-              className='md:ml-8 text-xl md:my-0 mt-8 hover:text-lightBlue transition-all tracking-wide cursor-pointer'
+              className='md:ml-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 hover:text-lightBlue transition-all tracking-wide cursor-pointer'
             >
               <Link
                 activeClass='active'

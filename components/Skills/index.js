@@ -23,16 +23,24 @@ export default function Skills() {
         className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-dark flex flex-col justify-center items-center'
       >
         <Titles>HABILIDADES</Titles>
-        <div className='flex gap-3 font-medium text-2xl text-white cursor-pointer mb-6'>
+        <div className='flex gap-6 font-medium text-2xl text-white cursor-pointer mb-6'>
           <h3
             onClick={toggleDevelopment}
-            className='transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue'
+            className={
+              development
+                ? "border-lightBlue border-b-2 text-lightBlue"
+                : `transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue`
+            }
           >
             Desarrollo
           </h3>
           <h3
             onClick={toggleDesign}
-            className='transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue'
+            className={
+              design
+                ? "border-lightBlue border-b-2 text-lightBlue"
+                : `transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue`
+            }
           >
             Diseño
           </h3>
@@ -43,8 +51,8 @@ export default function Skills() {
             <>
               <Card
                 src='/DevelopmentIcons/html.svg'
-                alt='HTML'
-                title='HTML'
+                alt='HTML5'
+                title='HTML5'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
               ></Card>
               <Card

@@ -1,51 +1,37 @@
 import Button from "../Button";
+import { Link } from "react-scroll";
 
 export default function Banner() {
   return (
     <>
-      <div className='relative bg-slate-400 w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden'>
-        <div className='absolute z-10 p-20 top-1/4 bg-black lg:px-sectionSides m:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]'>
+      <div className='relative bg-slate-800 w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden'>
+        <div className='absolute z-10 flex flex-col justify-center items-start bg-black lg:px-sectionSides m:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]'>
           <h1 className='text-white md:text-7xl  m:text-6xl text-left font-semibold mb-2'>
             ALEX TRAVERSO
           </h1>
           <h3 className='text-lightBlue font-semibold lg:text-3xl md:text-2x1 m:text-xl mb-5 tracking-wide'>
             Desarrollador web, Diseñador multimedia
           </h3>
-          <Button>CONTACTO</Button>
+
+          <Link
+            activeClass='active'
+            className='w-max font-semibold lg:text-lg lg:px-6 lg:py-2 sm:px-5 sm:py-2 m:px-4 m:py-1 m:text-sm text-white border-2  border-lightBlue rounded-lg hover:bg-lightBlue transition-all tracking-widest cursor-pointer'
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            CONTACTO
+          </Link>
         </div>
 
-        <div className='absolute top-0 left-0 w-full object-cover'>
-          {/* <video autoPlay loop muted className='h-full w-full block '>
-            <source src='https://video.wixstatic.com/video/584eeb_7d69869f7df04c108b5dcf9ba9f64998/1080p/mp4/file.mp4' />
-          </video> */}
-          <video autoPlay loop muted className='h-full w-full block '>
+        <div className='absolute top-0 left-0 h-screen w-screen'>
+          <video autoPlay loop muted className='h-full w-full object-cover'>
             <source src='/video-banner.mp4' />
           </video>
         </div>
       </div>
-
-      {/* <div className='flex relative flex-col h-[calc(100vh_-_5rem)] mt-20 p-20 bg-dark lg:px-sectionSides m:px-sectionSidesMobile'>
-          
-        </div> */}
-
-      {/* <div className='flex relative flex-col h-[calc(100vh_-_5rem)] mt-20 p-20 bg-dark lg:px-sectionSides m:px-sectionSidesMobile'>
-        <div className='absolute top-1/4 pl-0 py-20 pr-20 m:pr-0 m:py-10'>
-          <h1 className='text-white md:text-7xl sm:text-center lg:text-left m:text-6xl font-semibold mb-2'>
-            ALEX TRAVERSO
-          </h1>
-          <h3 className='text-lightBlue font-semibold lg:text-3xl md:text-2x1 m:text-xl mb-5 tracking-wide'>
-            Desarrollador web, Diseñador multimedia
-          </h3>
-          <Button>CONTACTO</Button>
-        </div>
-        <video
-          autoPlay
-          loop
-          className=' min-h-full min-w-full relative right-0'
-        >
-          <source src='https://video.wixstatic.com/video/584eeb_7d69869f7df04c108b5dcf9ba9f64998/1080p/mp4/file.mp4' />
-        </video>
-      </div> */}
     </>
   );
 }
