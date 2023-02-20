@@ -8,7 +8,7 @@ export default function AboutMe() {
     <>
       <div
         id='aboutMe'
-        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-darkGrey md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col m:flex m:justify-end m:flex-col '
+        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightestBg dark:bg-darkGrey md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col m:flex m:justify-end m:flex-col '
       >
         <Titles>SOBRE MÍ</Titles>
         <div className='flex lg:flex-row lg:items-start gap-16 transition-all m:flex-col m:justify-center m:items-center m:w-full'>
@@ -19,7 +19,7 @@ export default function AboutMe() {
               alt='Logo'
             />
           </div>
-          <div className=' text-white xl:w-[600px] md:w-[400px] xs:w-[350px] m:w-[300px] '>
+          <div className=' text-black dark:text-white xl:w-[600px] md:w-[400px] xs:w-[350px] m:w-[300px] '>
             <h2 className='font-medium lg:text-left xl:text-4xl mb-2  m:text-center m:text-3xl'>
               Alex Traverso
             </h2>

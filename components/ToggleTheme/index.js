@@ -21,7 +21,7 @@ const ToggleTheme = () => {
       <div className='flex justify-center m:mr-9'>
         {currentTheme === "dark" ? (
           <button
-            className='bg-black-700 hover:bg-black w-auto rounded-md border-lightBlue border-2 p-2'
+            className='bg-black-700 hover:bg-black w-auto rounded-md border-lightBlue border-2 p-1 transition-all'
             onClick={() => setTheme("light")}
           >
             {" "}
@@ -34,7 +34,7 @@ const ToggleTheme = () => {
           </button>
         ) : (
           <button
-            className='bg-gray-100 w-auto rounded-md border-lightBlue border-2 p-2 hover:bg-gray-300'
+            className='bg-gray-100 w-auto rounded-md border-lightBlue border-2 p-1 hover:bg-gray-300 transition-all'
             onClick={() => setTheme("dark")}
           >
             <Image

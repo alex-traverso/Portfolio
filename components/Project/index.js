@@ -20,9 +20,11 @@ export default function Project({
       />
       <div className='absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all'>
         <div className='flex flex-col w-full gap-6 absolute bottom-0'>
-          <div className=' bg-lightestGrey p-4 min-h-[120px]'>
-            <h2 className=' text-xl text-white font-medium'>{title}</h2>
-            <p className='text-white text-sm'>{description}</p>
+          <div className='bg-lightestBg dark:bg-lightestGrey p-4 min-h-[120px]'>
+            <h2 className=' text-xl text-black dark:text-white font-medium'>
+              {title}
+            </h2>
+            <p className='text-black dark:text-white text-sm'>{description}</p>
 
             <div className='flex gap-2 pt-2'>
               <a href={url} target='_blank' rel='noreferrer'>

@@ -1,10 +1,13 @@
 import Card from "../Card";
 import Titles from "../Titles";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 export default function Skills() {
   const [development, setDevelopment] = useState(true);
   const [design, setDesign] = useState(false);
+
+  const { theme, setTheme } = useTheme();
 
   const toggleDevelopment = () => {
     setDevelopment(true);
@@ -20,10 +23,10 @@ export default function Skills() {
     <>
       <div
         id='skills'
-        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-dark flex flex-col justify-center items-center'
+        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom  bg:lightDarkBg dark:bg-dark flex flex-col justify-center items-center'
       >
         <Titles>HABILIDADES</Titles>
-        <div className='flex gap-6 font-medium text-2xl text-white cursor-pointer mb-6'>
+        <div className='flex gap-6 font-medium text-2xl text-dark dark:text-white cursor-pointer mb-6'>
           <h3
             onClick={toggleDevelopment}
             className={
@@ -74,7 +77,11 @@ export default function Skills() {
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'
               ></Card>
               <Card
-                src='/DevelopmentIcons/nextJs.svg'
+                src={
+                  theme === "dark"
+                    ? "/DevelopmentIcons/nextjsDark.svg"
+                    : "/DevelopmentIcons/nextjsLight.svg"
+                }
                 alt='Next Js'
                 title='Next Js'
                 description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'

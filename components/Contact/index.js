@@ -43,18 +43,18 @@ export default function Contact() {
   return (
     <div
       id='contact'
-      className='flex flex-col justify-center items-center w-full bg-darkGrey pb-sectionBottom pt-sectionTop '
+      className='flex flex-col justify-center items-center w-full bg-lightestBg dark:bg-darkGrey pb-sectionBottom pt-sectionTop '
     >
       <Titles>CONTACTO</Titles>
       <form
         ref={form}
         onSubmit={handleSubmit}
         action=''
-        className=' flex flex-col justify-center items-start lg:w-[45%] sm:w-[60%] m:w-[80%] gap-3 text-white'
+        className=' flex flex-col justify-center items-start lg:w-[45%] sm:w-[60%] m:w-[80%] gap-3 text-black dark:text-white'
       >
         <input
           required
-          className=' bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
+          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
           type='text'
           value={name}
           name='name'
@@ -71,7 +71,7 @@ export default function Contact() {
 
         <input
           required
-          className=' bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
+          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
           type='text'
           value={email}
           name='email'
@@ -88,7 +88,7 @@ export default function Contact() {
 
         <textarea
           required
-          className='bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full resize-none h-36 rounded-xl'
+          className='bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full resize-none h-36 rounded-xl'
           value={message}
           name='message'
           type='textarea'
