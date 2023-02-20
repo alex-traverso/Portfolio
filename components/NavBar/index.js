@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { useTheme } from "next-themes";
 //Iconos
 import Menu from "../Icons/Menu/index";
 import Close from "../Icons/Close/index";
 //Imagen logo
 import Image from "next/image";
 import profilePic from "public/logo.png";
+import ToggleTheme from "../ToggleTheme";
 
 const NavBar = () => {
   let Links = [
@@ -16,11 +18,13 @@ const NavBar = () => {
     { name: "Contacto", link: "contact" },
   ];
 
-  let [open, setOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const [open, setOpen] = useState(false);
 
   return (
     <div className='shadow-md w-full fixed top-0 left-0 z-50'>
-      <div className='md:flex items-center justify-between bg-lightestGrey py-4 md:px-10 px-7'>
+      <div className='md:flex items-center justify-between bg-lightBg dark:bg-lightestGrey py-4 md:px-10 px-7'>
         <div
           className='font-bold text-2xl cursor-pointer flex items-center 
       text-gray-800'
@@ -49,11 +53,16 @@ const NavBar = () => {
         >
           <div>
             {open ? (
-              <Close width={30} height={30} stroke='#fff' strokeWidth={2} />
+              <Close
+                width={30}
+                height={30}
+                stroke={theme === "dark" ? "#fff" : "#000"}
+                strokeWidth={2}
+              />
             ) : (
               <Menu
                 className=''
-                stroke='#fff'
+                stroke={theme === "dark" ? "#fff" : "#000"}
                 width={30}
                 height={30}
                 onClick={() => {
@@ -64,14 +73,14 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static bg-lightestGrey md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
+          className={`m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static m:bg-lightBg m:dark:bg-lightestGrey md:bg-transparent md:dark:bg-transparent  md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-1000px]"
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.name}
-              className='md:ml-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 hover:text-lightBlue transition-all tracking-wide cursor-pointer'
+              className='m:mr-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 hover:text-lightBlue transition-all tracking-wide cursor-pointer'
             >
               <Link
                 activeClass='active'
@@ -80,12 +89,15 @@ const NavBar = () => {
                 offset={-80}
                 duration={500}
                 to={link.link}
-                className='text-white hover:text-lightBlue duration-500'
+                className='text-black dark:text-white hover:text-lightBlue duration-500'
               >
                 {link.name}
               </Link>
             </li>
           ))}
+          <div className='m:mt-4 lg:mt-0'>
+            <ToggleTheme />
+          </div>
         </ul>
       </div>
     </div>
