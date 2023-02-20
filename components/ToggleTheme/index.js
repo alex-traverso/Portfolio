@@ -17,14 +17,12 @@ const ToggleTheme = () => {
 
   return (
     <>
-      {" "}
       <div className='flex justify-center m:mr-9'>
         {currentTheme === "dark" ? (
           <button
             className='bg-black-700 hover:bg-black w-auto rounded-md border-lightBlue border-2 p-1 transition-all'
             onClick={() => setTheme("light")}
           >
-            {" "}
             <Image
               src='/DarkModeIcons/sun.svg'
               alt='logo'
