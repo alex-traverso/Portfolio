@@ -26,7 +26,7 @@ const ToggleTheme = () => {
           >
             {" "}
             <Image
-              src='DarkModeIcons/sun.svg'
+              src='/DarkModeIcons/sun.svg'
               alt='logo'
               height={30}
               width={30}
@@ -38,7 +38,7 @@ const ToggleTheme = () => {
             onClick={() => setTheme("dark")}
           >
             <Image
-              src='DarkModeIcons/moon.svg'
+              src='/DarkModeIcons/moon.svg'
               alt='logo'
               height={30}
               width={30}
