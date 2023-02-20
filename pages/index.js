@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import Services from "@/components/ServicesComp";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer/index";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 
 import SocialMedia from "@/components/SocialMedia";
