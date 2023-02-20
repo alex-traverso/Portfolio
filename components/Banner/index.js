@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 export default function Banner() {
   return (
     <>
-      <div className='relative bg-slate-800 w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden'>
+      <div className='relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden'>
         <div className='absolute z-10 flex flex-col justify-center items-start bg-black lg:px-sectionSides m:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]'>
           <h1 className='text-white md:text-7xl  m:text-6xl text-left font-semibold mb-2'>
             ALEX TRAVERSO
