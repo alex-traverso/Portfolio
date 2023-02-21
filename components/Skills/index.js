@@ -78,9 +78,9 @@ export default function Skills() {
               ></Card>
               <Card
                 src={
-                  theme === "dark"
-                    ? "/DevelopmentIcons/nextjsDark.svg"
-                    : "/DevelopmentIcons/nextjsLight.svg"
+                  theme === "light"
+                    ? "/DevelopmentIcons/nextLight.svg"
+                    : "/DevelopmentIcons/nextDark.svg"
                 }
                 alt='Next Js'
                 title='Next Js'

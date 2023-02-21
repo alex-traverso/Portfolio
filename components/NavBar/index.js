@@ -73,7 +73,7 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`font-medium m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static m:bg-lightestBg m:dark:bg-lightestGrey md:bg-transparent md:dark:bg-transparent  md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
+          className={`font-medium m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static m:bg-lightestBg m:dark:bg-lightestGrey  md:bg-transparent md:dark:bg-transparent  md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-1000px]"
           }`}
         >
@@ -95,7 +95,7 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
-          <div className='m:mt-4 lg:mt-0'>
+          <div className=' m:mt-4 md:mt-0 m:mr-9 md:mr-0'>
             <ToggleTheme />
           </div>
         </ul>

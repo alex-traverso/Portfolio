@@ -15,10 +15,9 @@ export default function SocialMedia() {
           href='https://www.instagram.com/alextraverso/'
         >
           <Instagram
-            className='hover:fill-lightBlue transition-all shadow-md'
+            className='fill-black dark:fill-white hover:fill-lightBlue hover:dark:fill-lightBlue transition-all shadow-md'
             width={20}
             height={20}
-            fill={theme === "dark" ? "#fff" : "#000"}
           />
         </a>
         <a
@@ -27,10 +26,9 @@ export default function SocialMedia() {
           href='https://github.com/alex-traverso'
         >
           <Github
-            className='hover:stroke-lightBlue transition-all shadow-md'
+            className='stroke-black dark:stroke-white hover:stroke-lightBlue hover:dark:stroke-lightBlue transition-all shadow-md'
             width={20}
             height={20}
-            stroke={theme === "dark" ? "#fff" : "#000"}
           />
         </a>
 
@@ -40,10 +38,9 @@ export default function SocialMedia() {
           href='https://www.linkedin.com/in/alex-traverso'
         >
           <Linkedin
-            className='hover:fill-lightBlue transition-all shadow-md'
+            className='fill-black dark:fill-white hover:fill-lightBlue hover:dark:fill-lightBlue transition-all shadow-md'
             width={20}
             height={20}
-            fill={theme === "dark" ? "#fff" : "#000"}
           />
         </a>
         <hr className='h-24 w-0.5 border-0 border-lightBlue bg-lightBlue' />
