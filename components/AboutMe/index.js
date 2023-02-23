@@ -29,15 +29,17 @@ export default function AboutMe() {
                 End. Soy una persona apasionada por el mundo del desarrollo y
                 tecnología, además de trabajar en equipo. Mis principales
                 habilidades son:
-              </p>
-              <br />
-              <p>HTML5 | CSS | JAVASCRIPT | REACT JS | GIT</p>
-              <br />
-              <p>Aunque tengo conocimientos acerca de:</p>
-              <br />
-              <p>REDUX | NEXT JS | NODEJS | EXPRESS | MONGODB | MONGOOSE.</p>
-              <br />
-              <p>
+                <br />
+                <br />
+                HTML5 | CSS | JAVASCRIPT | REACT JS | GIT
+                <br />
+                <br />
+                Aunque tengo conocimientos acerca de:
+                <br />
+                <br />
+                REDUX | NEXT JS | NODEJS | EXPRESS | MONGODB | MONGOOSE.
+                <br />
+                <br />
                 Siempre estoy dispuesto a aprender cosas nuevas para
                 desarrollarme profesionalmente y pertenecer a un equipo en el
                 cual pueda colaborar con mis esfuerzos y adquirir experiencia.
