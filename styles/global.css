@@ -41,6 +41,7 @@
 
 a[disabled] {
   pointer-events: none;
-  background-color: #000;
+
+  border-color: #bdbdbd;
   opacity: 0.5;
 }
