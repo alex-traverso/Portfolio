@@ -13,6 +13,7 @@ export default function Contact() {
   };
 
   const [error, setError] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   // Funcion que se ejecuta cuando el usuario hace submit
   const sendEmail = () => {
@@ -26,6 +27,7 @@ export default function Contact() {
       .then(
         (result) => {
           console.log(result.text);
+          setIsOpen(true);
         },
         (error) => {
           console.log(error.text);
@@ -33,11 +35,16 @@ export default function Contact() {
       );
   };
 
+  console.log(error);
+
   const { values, errors, handleChange, handleSubmit, handleBlur } =
     useValidation(INITIAL_STATE, validateForm, sendEmail);
 
   const { name, email, message } = values;
+  console.log(values);
   const form = useRef();
+
+  const isButtonDisabled = name === "" || email === "" || message === "";
 
   //AGREGAR UN MODAL O ALGO QUE LE INDIQUE AL USUARIO QUE SE ENVIO EL MENSAJE
   return (
@@ -46,6 +53,32 @@ export default function Contact() {
       className='flex flex-col justify-center items-center w-full bg-lightestBg dark:bg-darkGrey pb-sectionBottom pt-sectionTop '
     >
       <Titles>CONTACTO</Titles>
+      <section>
+        {isOpen ? (
+          <section className='bg-dark min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed '>
+            <div className="'duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] cursor-pointer flex-col items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all hover:bg-lightestGrey  border-zinc-700/40 dark:shadow-zinc-700/40 hover:bg-zinc-600/30 dark:hover:shadow-transparent'">
+              <h2 className='text-2xl'>El mensaje se envió con exito</h2>
+              {isOpen ? (
+                <Button
+                  onClick={() => {
+                    setIsOpen(false);
+                  }}
+                >
+                  Cerrar
+                </Button>
+              ) : null}
+            </div>
+          </section>
+        ) : null}
+        <button
+          className='text-white'
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+        >
+          X
+        </button>
+      </section>
       <form
         ref={form}
         onSubmit={handleSubmit}
@@ -103,11 +136,11 @@ export default function Contact() {
           </div>
         ) : null}
 
-        {error ? (
-          <div className='lg:px-3 m:px-2 text-red-500 text-center'>{error}</div>
-        ) : null}
-
-        <Button onClick={handleSubmit} type='submit'>
+        <Button
+          disabled={isButtonDisabled}
+          onClick={handleSubmit}
+          type='submit'
+        >
           ENVIAR
         </Button>
       </form>

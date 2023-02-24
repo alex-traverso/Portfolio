@@ -20,7 +20,7 @@ export const validateForm = (values) => {
 
   // validar el message
   if (!values.message) {
-    errors.message = "El message es obligatorio";
+    errors.message = "El mensaje es obligatorio";
   } else if (values.message.length < 10) {
     errors.message = "El mensaje debe contener por lo menos 10 caracteres";
   }
