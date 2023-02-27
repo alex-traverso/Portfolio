@@ -3,7 +3,6 @@ import { validateForm } from "@/validate/validateForm";
 import useValidation from "@/hooks/useValidation";
 import Titles from "../Titles";
 import Button from "../Button";
-import emailjs from "@emailjs/browser";
 import Check from "../Icons/Check/index";
 
 export default function Contact() {
@@ -13,79 +12,49 @@ export default function Contact() {
     message: "",
   };
 
-  const [error, setError] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-
   // Funcion que se ejecuta cuando el usuario hace submit
-  const sendEmail = () => {
-    emailjs
-      .sendForm(
-        "service_vgs55vd",
-        "template_y7yjl75",
-        form.current,
-        "NUH1ZdYHL0tqg9HZl"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setIsOpen(true);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  const openModal = () => {
+    setModal(true);
   };
 
-  console.log(error);
-
-  const { values, errors, handleChange, handleSubmit, handleBlur } =
-    useValidation(INITIAL_STATE, validateForm, sendEmail);
+  const { values, errors, isOpen, handleChange, handleSubmit, handleBlur } =
+    useValidation(INITIAL_STATE, validateForm, openModal);
 
   const { name, email, message } = values;
-  console.log(values);
-  const form = useRef();
 
   const isButtonDisabled = name === "" || email === "" || message === "";
 
-  //AGREGAR UN MODAL O ALGO QUE LE INDIQUE AL USUARIO QUE SE ENVIO EL MENSAJE
+  const [modal, setModal] = useState(isOpen);
+
   return (
     <div
       id='contact'
+      onSubmit={openModal}
       className='flex flex-col justify-center items-center w-full bg-lightestBg dark:bg-darkGrey pb-sectionBottom pt-sectionTop '
     >
       <Titles>CONTACTO</Titles>
       <section>
-        {isOpen ? (
+        {modal ? (
           <section className='bg-dark/50 min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed'>
-            <div className='bg-dark duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] cursor-pointer flex-col justify-center items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all border-zinc-700/40 dark:shadow-zinc-700/40 '>
+            <div className='bg-dark duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] flex-col justify-center items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all border-zinc-700/40 dark:shadow-zinc-700/40'>
               <h2 className='text-2xl'>El mensaje se envió con exito</h2>
               <Check width={70} height={70} stroke='#4399CE' />
-              {isOpen ? (
+              {modal ? (
                 <Button
                   onClick={() => {
-                    setIsOpen(false);
+                    setModal(false);
                   }}
                 >
-                  Cerrar
+                  CERRAR
                 </Button>
               ) : null}
             </div>
           </section>
         ) : null}
-
-        <button
-          className='text-white'
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
-          X
-        </button>
       </section>
       <form
-        ref={form}
         onSubmit={handleSubmit}
-        action=''
+        type='submit'
         className=' flex flex-col justify-center items-start lg:w-[45%] sm:w-[60%] m:w-[80%] gap-3 text-black dark:text-white'
       >
         <input

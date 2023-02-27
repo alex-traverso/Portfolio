@@ -4,6 +4,7 @@ const useValidation = (initialState, validate, fn) => {
   const [values, setValues] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [submitForm, setSubmitForm] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     if (submitForm) {
@@ -31,6 +32,25 @@ const useValidation = (initialState, validate, fn) => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setSubmitForm(true);
+    console.log(e.target.value);
+
+    fetch("https://formsubmit.co/ajax/alextraverso6@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(values),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        if (data.success === "true") {
+          setValues(initialState);
+          setIsOpen(true);
+        }
+      })
+      .catch((error) => console.log(error));
   };
 
   // cuando se realiza el evento de blur
@@ -42,6 +62,7 @@ const useValidation = (initialState, validate, fn) => {
   return {
     values,
     errors,
+    isOpen,
     handleChange,
     handleSubmit,
     handleBlur,
