@@ -17,6 +17,7 @@ module.exports = {
         lightDarkBg: "#d7d7d7",
         darkGrey: "#171717",
         lightGrey: "#BDBDBD",
+        darkBgOpacity: "rgba(0, 0, 0, 0.7)",
         lightestGrey: "#232323",
         dark: "#0F0F0F",
         lightBlue: "#4399CE",

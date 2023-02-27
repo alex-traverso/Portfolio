@@ -4,6 +4,7 @@ import useValidation from "@/hooks/useValidation";
 import Titles from "../Titles";
 import Button from "../Button";
 import emailjs from "@emailjs/browser";
+import Check from "../Icons/Check/index";
 
 export default function Contact() {
   const INITIAL_STATE = {
@@ -55,9 +56,10 @@ export default function Contact() {
       <Titles>CONTACTO</Titles>
       <section>
         {isOpen ? (
-          <section className='bg-dark min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed '>
-            <div className="'duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] cursor-pointer flex-col items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all hover:bg-lightestGrey  border-zinc-700/40 dark:shadow-zinc-700/40 hover:bg-zinc-600/30 dark:hover:shadow-transparent'">
+          <section className='bg-dark/50 min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed'>
+            <div className='bg-dark duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] cursor-pointer flex-col justify-center items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all border-zinc-700/40 dark:shadow-zinc-700/40 '>
               <h2 className='text-2xl'>El mensaje se envió con exito</h2>
+              <Check width={70} height={70} stroke='#4399CE' />
               {isOpen ? (
                 <Button
                   onClick={() => {
@@ -70,6 +72,7 @@ export default function Contact() {
             </div>
           </section>
         ) : null}
+
         <button
           className='text-white'
           onClick={() => {
