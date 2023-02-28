@@ -4,12 +4,13 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function Skills() {
-  const [development, setDevelopment] = useState(true);
-  const [design, setDesign] = useState(false);
+  const [category, setCategory] = useState("Development");
+  /*  const [development, setDevelopment] = useState(true);
+  const [design, setDesign] = useState(false); */
 
   const { theme, setTheme } = useTheme();
 
-  const toggleDevelopment = () => {
+  /* const toggleDevelopment = () => {
     setDevelopment(true);
     setDesign(false);
   };
@@ -17,7 +18,7 @@ export default function Skills() {
   const toggleDesign = () => {
     setDesign(true);
     setDevelopment(false);
-  };
+  }; */
 
   return (
     <>
@@ -27,30 +28,34 @@ export default function Skills() {
       >
         <Titles>HABILIDADES</Titles>
         <div className='flex gap-6 font-medium text-2xl text-dark dark:text-white cursor-pointer mb-6'>
-          <h3
-            onClick={toggleDevelopment}
+          <button
+            onClick={() => {
+              setCategory("Development");
+            }}
             className={
-              development
+              category === "Development"
                 ? "border-lightBlue border-b-2 text-lightBlue"
                 : `transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue`
             }
           >
-            Desarrollo
-          </h3>
-          <h3
-            onClick={toggleDesign}
+            Desarrollo Web
+          </button>
+          <button
+            onClick={() => {
+              setCategory("Design");
+            }}
             className={
-              design
+              category === "Design"
                 ? "border-lightBlue border-b-2 text-lightBlue"
                 : `transition-all hover:text-lightBlue hover:border-b-2 hover:border-lightBlue`
             }
           >
             Diseño
-          </h3>
+          </button>
         </div>
 
         <div className='flex flex-wrap justify-center items-center gap-6 w-[70vw]'>
-          {development ? (
+          {category === "Development" ? (
             <>
               <Card
                 src='/DevelopmentIcons/html.svg'
@@ -112,7 +117,7 @@ export default function Skills() {
               ></Card>
             </>
           ) : null}
-          {design ? (
+          {category === "Design" ? (
             <>
               <Card
                 src='/DesignIcons/illustrator.svg'
