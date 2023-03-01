@@ -1,13 +1,16 @@
 export const validateForm = (values) => {
   let errors = {};
 
+  const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   // validar el nombre
-  if (!values.name) {
+  if (!values.name.trim()) {
     errors.name = "El nombre es obligatorio";
+  } else if (!regexName.test(values.name.trim())) {
+    errors.name = "El campo 'Nombre' sólo acepta letras y espacios en blanco";
   }
 
   // validar el email
-  if (!values.email) {
+  if (!values.email.trim()) {
     errors.email = "El email es obligatorio";
   } else if (
     !(
@@ -19,9 +22,10 @@ export const validateForm = (values) => {
   }
 
   // validar el message
-  if (!values.message) {
+  if (!values.message.trim()) {
     errors.message = "El mensaje es obligatorio";
-  } else if (values.message.length < 10) {
+  }
+  if (values.message.length < 10) {
     errors.message = "El mensaje debe contener por lo menos 10 caracteres";
   }
 

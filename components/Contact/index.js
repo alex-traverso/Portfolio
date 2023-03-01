@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { validateForm } from "@/validate/validateForm";
 import useValidation from "@/hooks/useValidation";
 import Titles from "../Titles";
@@ -21,10 +21,14 @@ export default function Contact() {
     useValidation(INITIAL_STATE, validateForm, openModal);
 
   const { name, email, message } = values;
-
-  const isButtonDisabled = name === "" || email === "" || message === "";
-
   const [modal, setModal] = useState(isOpen);
+
+  const isButtonDisabled =
+    Object.keys(errors).length > 0 ||
+    name === "" ||
+    email === "" ||
+    message === "" ||
+    message.length < 10;
 
   return (
     <div

@@ -20,9 +20,11 @@ const useValidation = (initialState, validate, fn) => {
 
   /* Funcion que se ejecuta a medida que el usuario escribe algo */
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
     setValues({
       ...values,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
 
@@ -32,7 +34,6 @@ const useValidation = (initialState, validate, fn) => {
     const validationErrors = validate(values);
     setErrors(validationErrors);
     setSubmitForm(true);
-    console.log(e.target.value);
 
     fetch("https://formsubmit.co/ajax/alextraverso6@gmail.com", {
       method: "POST",
