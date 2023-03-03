@@ -6,7 +6,7 @@ export default function Services() {
     <>
       <div
         id='services'
-        className='lg:px-sectionSides m:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightestBg dark:bg-darkGrey flex flex-col justify-center items-center'
+        className='lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightestBg dark:bg-darkGrey flex flex-col justify-center items-center'
       >
         <div>
           <Titles>SERVICIOS</Titles>

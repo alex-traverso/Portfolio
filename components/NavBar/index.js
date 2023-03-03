@@ -19,6 +19,7 @@ const NavBar = () => {
   ];
 
   const { theme, setTheme } = useTheme();
+  console.log(theme);
 
   const [open, setOpen] = useState(false);
 
@@ -54,15 +55,14 @@ const NavBar = () => {
           <div>
             {open ? (
               <Close
+                className='stroke-black dark:stroke-white'
                 width={30}
                 height={30}
-                stroke={theme === "dark" ? "#fff" : "#000"}
                 strokeWidth={2}
               />
             ) : (
               <Menu
-                className=''
-                stroke={theme === "dark" ? "#fff" : "#000"}
+                className='stroke-black dark:stroke-white'
                 width={30}
                 height={30}
                 onClick={() => {
@@ -73,14 +73,14 @@ const NavBar = () => {
           </div>
         </div>
         <ul
-          className={`font-medium m:flex m:flex-col m:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static m:bg-lightestBg m:dark:bg-lightestGrey  md:bg-transparent md:dark:bg-transparent  md:z-auto z-[-1] right-0 w-[60%] m:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
+          className={`font-medium mm:flex mm:flex-col mm:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static mm:bg-lightestBg mm:dark:bg-lightestGrey  md:bg-transparent md:dark:bg-transparent  md:z-auto z-[-1] right-0 w-[60%] mm:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-in ${
             open ? "top-20 " : "top-[-1000px]"
           }`}
         >
           {Links.map((link) => (
             <li
               key={link.name}
-              className='m:mr-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 tracking-wide cursor-pointer'
+              className='mm:mr-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 tracking-wide cursor-pointer'
             >
               <Link
                 activeClass='active'
@@ -95,7 +95,7 @@ const NavBar = () => {
               </Link>
             </li>
           ))}
-          <div className=' m:mt-4 md:mt-0 m:mr-9 md:mr-0'>
+          <div className=' mm:mt-4 md:mt-0 mm:mr-9 md:mr-0'>
             <ToggleTheme />
           </div>
         </ul>

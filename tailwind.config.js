@@ -28,6 +28,7 @@ module.exports = {
         sectionSidesMobile: "2rem",
       },
       screens: {
+        mm: "320px",
         m: "375px",
         xs: "480px",
       },

@@ -59,11 +59,11 @@ export default function Contact() {
       <form
         onSubmit={handleSubmit}
         type='submit'
-        className=' flex flex-col justify-center items-start lg:w-[45%] sm:w-[60%] m:w-[80%] gap-3 text-black dark:text-white'
+        className=' flex flex-col justify-center items-start lg:w-[45%] smm:w-[60%] mm:w-[80%] gap-3 text-black dark:text-white'
       >
         <input
           required
-          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
+          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl'
           type='text'
           value={name}
           name='name'
@@ -73,14 +73,14 @@ export default function Contact() {
         />
 
         {errors.name ? (
-          <div className='lg:px-3 m:px-2 text-red-500 text-center'>
+          <div className='lg:px-3 mm:px-2 text-red-500 text-center'>
             {errors.name}
           </div>
         ) : null}
 
         <input
           required
-          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full rounded-xl'
+          className=' bg-lightDarkBg dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl'
           type='text'
           value={email}
           name='email'
@@ -90,14 +90,14 @@ export default function Contact() {
         />
 
         {errors.email ? (
-          <div className='lg:px-3 m:px-2 text-red-500 text-center'>
+          <div className='lg:px-3 mm:px-2 text-red-500 text-center'>
             {errors.email}
           </div>
         ) : null}
 
         <textarea
           required
-          className='bg-lightDarkBg dark:bg-lightestGrey lg:p-3 m:px-3 m:py-2 w-full resize-none h-36 rounded-xl'
+          className='bg-lightDarkBg dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full resize-none h-36 rounded-xl'
           value={message}
           name='message'
           type='textarea'
@@ -107,7 +107,7 @@ export default function Contact() {
         ></textarea>
 
         {errors.message ? (
-          <div className='lg:px-3 m:px-2 text-red-500 text-center'>
+          <div className='lg:px-3 mm:px-2 text-red-500 text-center'>
             {errors.message}
           </div>
         ) : null}

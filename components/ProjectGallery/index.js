@@ -3,8 +3,8 @@ import Project from "../Project";
 export default function ProjectGallery() {
   return (
     <>
-      <div className='lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] sm:grid sm:grid-cols-2 sm:gap-x-2 sm:gap-y-4 m:grid m:gap-y-3'>
-        <div className='rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto  m:h-[250px]'>
+      <div className='lg:grid lg:grid-cols-4 lg:grid-rows-4 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3'>
+        <div className='rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto  mm:h-[250px]'>
           <Project
             title='Devter'
             description='Clon de Twitter, con funcionalidades como realizar un tweet, comentar e interactuar con otros tweets.'
@@ -15,7 +15,7 @@ export default function ProjectGallery() {
             tech='Next Js'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:col-span-2 lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:col-span-2 lg:h-auto  mm:h-[250px]'>
           <Project
             title='Lista de productos'
             description='CRUD de lista de productos, en las que el usuario puede subir, ver, editar y eliminar productos'
@@ -26,7 +26,7 @@ export default function ProjectGallery() {
             tech='React Js, Redux'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:h-auto  mm:h-[250px]'>
           <Project
             title='Product Hunt Clon'
             description='Clon de Product Hunt, en la que el usuario puede subir sus productos, realizar comentarios y votar sobre productos de otros usuarios.'
@@ -37,7 +37,7 @@ export default function ProjectGallery() {
             tech='Next Js'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:h-auto  mm:h-[250px]'>
           <Project
             title='Lista de notas'
             description='Aplicación para poder crear y borrar notas.'
@@ -48,7 +48,7 @@ export default function ProjectGallery() {
             tech='Next Js'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:h-auto  mm:h-[250px]'>
           <Project
             title='Pokemon Api'
             description='Aplicación para ver una Lista de todos los Pokemones existentes.'
@@ -59,7 +59,7 @@ export default function ProjectGallery() {
             tech='HTML, CSS, Javascript'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:col-span-2 lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:col-span-2 lg:h-auto  mm:h-[250px]'>
           <Project
             title='Dona sangre'
             description='Rediseño de sitio web de ONG "Dona Sangre". '
@@ -70,7 +70,7 @@ export default function ProjectGallery() {
             tech='HTML, CSS, Javascript, Jquery'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:row-span-2 lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:row-span-2 lg:h-auto  mm:h-[250px]'>
           <Project
             title='Calculadora'
             description='Calculadora con múltiples operaciones.'
@@ -82,7 +82,7 @@ export default function ProjectGallery() {
           ></Project>
         </div>
 
-        <div className=' rounded-lg shadow-xl lg:col-span-2 lg:h-auto  m:h-[250px]'>
+        <div className=' rounded-lg shadow-xl lg:col-span-2 lg:h-auto  mm:h-[250px]'>
           <Project
             title='Memorama'
             description='Juego de memoria en la que hay que encontrar las 2 cartas con el mismo emoji para pasar de nivel, aunque también tiene su modo "relajado" para jugarlo sin tiempo ni errores.'
@@ -93,7 +93,7 @@ export default function ProjectGallery() {
             tech='HTML, CSS, Javascript'
           ></Project>
         </div>
-        <div className='rounded-lg shadow-xl lg:h-auto  m:h-[250px]'>
+        <div className='rounded-lg shadow-xl lg:h-auto  mm:h-[250px]'>
           <Project
             title='Landing Page'
             description='Landing page de producto.'

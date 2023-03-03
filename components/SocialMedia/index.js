@@ -8,14 +8,14 @@ export default function SocialMedia() {
   const { theme, setTheme } = useTheme();
   return (
     <>
-      <div className='flex flex-col justify-end items-center fixed bottom-0 z-50 lg:left-12 m:left-4 sm:left-8 gap-6 lg:h-2/6 md:h-1/4 m:h-1/5'>
+      <div className='flex flex-col justify-end items-center fixed bottom-0 z-50 lg:left-12 mm:left-4 smm:left-8 gap-6 lg:h-2/6 md:h-1/4 mm:h-1/5'>
         <a
           target='_blank'
           rel='noreferrer'
           href='https://www.instagram.com/alextraverso/'
         >
           <Instagram
-            className='fill-black dark:fill-white hover:fill-lightBlue hover:dark:fill-lightBlue transition-all shadow-md'
+            className='fill-lightBlue hover:scale-[1.05] duration-500 shadow-lg'
             width={20}
             height={20}
           />
@@ -26,7 +26,7 @@ export default function SocialMedia() {
           href='https://github.com/alex-traverso'
         >
           <Github
-            className='stroke-black dark:stroke-white hover:stroke-lightBlue hover:dark:stroke-lightBlue transition-all shadow-md'
+            className='stroke-lightBlue hover:scale-[1.05] duration-500 shadow-md'
             width={20}
             height={20}
           />
@@ -38,7 +38,7 @@ export default function SocialMedia() {
           href='https://www.linkedin.com/in/alex-traverso'
         >
           <Linkedin
-            className='fill-black dark:fill-white hover:fill-lightBlue hover:dark:fill-lightBlue transition-all shadow-md'
+            className='fill-lightBlue hover:scale-[1.05] duration-500 shadow-md'
             width={20}
             height={20}
           />
