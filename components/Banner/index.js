@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 
 export default function Banner() {
@@ -10,8 +10,19 @@ export default function Banner() {
             ALEX TRAVERSO
           </h1>
           <h3 className='text-lightBlue font-semibold lg:text-3xl md:text-2x1 m:text-xl mb-5 tracking-wide'>
-            Desarrollador web, Diseñador multimedia
+            <Typewriter
+              options={{
+                strings: ["Desarrollador Web", "Diseñador Multimedia"],
+                autoStart: true,
+                loop: true,
+                skipAddStyles: true,
+                delay: 100,
+              }}
+            />
           </h3>
+          {/*  <h3 className='text-lightBlue font-semibold lg:text-3xl md:text-2x1 m:text-xl mb-5 tracking-wide'>
+            Desarrollador web, Diseñador multimedia
+          </h3> */}
 
           <Link
             activeClass='active'

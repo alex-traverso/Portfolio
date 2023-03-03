@@ -28,7 +28,7 @@ export default function Contact() {
     name === "" ||
     email === "" ||
     message === "" ||
-    message.length < 10;
+    message.length < 5;
 
   return (
     <div

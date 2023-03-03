@@ -12,7 +12,7 @@ export default function AboutMe() {
       >
         <Titles>SOBRE MÍ</Titles>
         <div className='flex lg:flex-row lg:items-start gap-16 transition-all m:flex-col m:justify-center m:items-center m:w-full'>
-          <div className=' rounded-lg m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden '>
+          <div className=' rounded-lg m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden'>
             <Image
               className='object-cover w-full h-full object-top drop-shadow-md hover:scale-[1.02] duration-[0.3s]'
               src={profile}

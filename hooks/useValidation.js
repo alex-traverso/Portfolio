@@ -26,6 +26,8 @@ const useValidation = (initialState, validate, fn) => {
       ...values,
       [name]: value,
     });
+    const validationErrors = validate(values);
+    setErrors(validationErrors);
   };
 
   // Funcion que se ejecuta cuando el usuario hace submit

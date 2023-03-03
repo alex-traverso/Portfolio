@@ -23,7 +23,10 @@ export default function Home() {
     <>
       <Head>
         <title>Traverso Alex Portfolio</title>
-        <meta name='description' content='Traverso Alex Portfolio' />
+        <meta
+          name='description'
+          content='Traverso Alex Portfolio, Desarrollador front-end, HTML, CSS, Javascript, React Js, Next Js'
+        />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/logo.png' />
       </Head>
