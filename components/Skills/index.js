@@ -87,14 +87,19 @@ export default function Skills() {
                 title="Next Js"
               ></Card>
               <Card
-                src="/DevelopmentIcons/git.svg"
-                alt="Git"
-                title="Git"
+                src="/DevelopmentIcons/mongodb.svg"
+                alt="MongoDB"
+                title="MongoDB"
               ></Card>
               <Card
                 src="/DevelopmentIcons/firebase.svg"
                 alt="Firebase"
                 title="Firebase"
+              ></Card>
+              <Card
+                src="/DevelopmentIcons/git.svg"
+                alt="Git"
+                title="Git"
               ></Card>
               <Card
                 src="/DevelopmentIcons/bootstrap.svg"
@@ -103,8 +108,8 @@ export default function Skills() {
               ></Card>
               <Card
                 src="/DevelopmentIcons/tailwind.svg"
-                alt="Talwind"
-                title="Talwind"
+                alt="Talwind CSS"
+                title="Talwind CSS"
               ></Card>
             </>
           ) : null}
