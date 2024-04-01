@@ -3,7 +3,7 @@ import Project from "../Project";
 export default function ProjectGallery() {
   return (
     <>
-      <div className="lg:grid lg:grid-cols-4 lg:grid-rows-5 lg:gap-x-2 lg:gap-y-3 lg:h-[60rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3">
+      <div className="lg:grid lg:grid-cols-4 lg:grid-rows-5 lg:gap-x-2 lg:gap-y-3 lg:h-[70rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3">
         <div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto  mm:h-[250px]">
           <Project
             title="Devter"
