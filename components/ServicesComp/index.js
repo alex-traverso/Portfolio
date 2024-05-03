@@ -23,7 +23,7 @@ export default function Services() {
             src='/design-icon.svg'
             alt='Diseño web y gráfico'
             title='Diseño web y gráfico'
-            description='Diseños modernos y minimalistas para tus sitios web o identidad visual'
+            description='Diseños modernos y minimalistas para tus sitios web o identidad visual.'
           />
           <ServicesCard
             src='/development-icon.svg'
