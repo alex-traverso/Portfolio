@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { Roboto } from "@next/font/google";
-// import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
+import localFont from "next/font/local";
 
 //Componentes
 import Banner from "@/components/Banner/index";
@@ -19,19 +19,16 @@ const roboto = Roboto({
 	weight: ["100", "300", "400", "500", "700", "900"],
 });
 
-// const madeOuterRegular = localFont({
-// 	src: "../public/fonts/madeOuter/MADE Outer Sans Regular.otf",
+const madeOuterRegular = localFont({
+	src: "../public/fonts/madeOuter/MADE Outer Sans Regular.otf",
+	variable: "--font-madeOuterRegular",
+});
 
-// 	variable: "--font-madeOuterRegular",
-// });
+const madeOuterBold = localFont({
+	src: "../public/fonts/madeOuter/MADE Outer Sans Bold.otf",
 
-// const madeOuterBold = localFont({
-// 	src: "../public/fonts/madeOuter/MADE Outer Sans Bold.otf",
-
-// 	variable: "--font-madeOuterBold",
-// });
-
-// ${madeOuterRegular.variable} ${madeOuterBold.variable}
+	variable: "--font-madeOuterBold",
+});
 
 export default function Home() {
 	return (
@@ -45,7 +42,10 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/logo.png" />
 			</Head>
-			<main className={`${roboto.className} `} id="home">
+			<main
+				className={`${roboto.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
+				id="home"
+			>
 				<NavBar />
 				<Banner />
 				<SocialMedia />

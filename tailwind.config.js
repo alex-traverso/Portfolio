@@ -33,6 +33,7 @@ module.exports = {
 				xs: "480px",
 			},
 			fontFamily: {
+				madeOuter: ["var(--font-madeOuter)"],
 				madeOuterRegular: ["var(--font-madeOuterRegular)"],
 				madeOuterBold: ["var(--font-madeOuterBold)"],
 			},
