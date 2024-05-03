@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
 //Componentes
@@ -15,6 +16,11 @@ import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
 
 const roboto = Roboto({
+	subsets: ["latin"],
+	weight: ["100", "300", "400", "500", "700", "900"],
+});
+
+const inter = Inter({
 	subsets: ["latin"],
 	weight: ["100", "300", "400", "500", "700", "900"],
 });
@@ -43,7 +49,7 @@ export default function Home() {
 				<link rel="icon" href="/logo.png" />
 			</Head>
 			<main
-				className={`${roboto.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
+				className={`${inter.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
 				id="home"
 			>
 				<NavBar />
