@@ -14,33 +14,33 @@ import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
 
 const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
+	subsets: ["latin"],
+	weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Traverso Alex Portfolio</title>
-        <meta
-          name='description'
-          content='Traverso Alex Portfolio, Desarrollador Front-End, HTML, CSS, Javascript, React Js, Next Js, MongoDB'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/logo.png' />
-      </Head>
-      <main className={roboto.className} id='home'>
-        <NavBar />
-        <Banner />
-        <SocialMedia />
-        <AboutMe />
-        <Skills />
-        <Services />
-        <Projects />
-        <Contact />
-        <Footer />
-      </main>
-    </>
-  );
+	return (
+		<>
+			<Head>
+				<title>Traverso Alex Portfolio</title>
+				<meta
+					name="description"
+					content="Traverso Alex Portfolio, Desarrollador Front-End, HTML, CSS, Javascript, React Js, Next Js, MongoDB"
+				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/logo.png" />
+			</Head>
+			<main className={roboto.className} id="home">
+				<NavBar />
+				<Banner />
+				<SocialMedia />
+				<AboutMe />
+				<Skills />
+				<Services />
+				<Projects />
+				<Contact />
+				<Footer />
+			</main>
+		</>
+	);
 }
