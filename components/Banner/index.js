@@ -1,29 +1,15 @@
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 
-import localFont from "@next/font/local";
-
-const madeOuterRegular = localFont({
-	src: "../../fonts/madeOuter/MADE Outer Sans Regular.otf",
-});
-
-const madeOuterBold = localFont({
-	src: "../../fonts/madeOuter/MADE Outer Sans Bold.otf",
-});
-
 export default function Banner() {
 	return (
 		<>
 			<div className="relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden">
 				<div className="absolute z-10 flex flex-col justify-center items-start bg-black lg:px-sectionSides mm:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]">
-					<h1
-						className={`${madeOuterBold.className} text-white md:text-7xl mm:text-5xl m:text-6xl text-left font-semibold mb-2`}
-					>
+					<h1 className="text-white font-madeOuterBold font-bold md:text-7xl mm:text-5xl m:text-6xl text-left mb-2">
 						ALEX TRAVERSO
 					</h1>
-					<h3
-						className={`${madeOuterRegular.className} text-lightBlue font-semibold lg:text-3xl md:text-2x1 mm:text-xl mb-5 tracking-wide`}
-					>
+					<h3 className="text-lightBlue font-madeOuterRegular lg:text-3xl md:text-2x1 mm:text-xl mb-5 tracking-wide">
 						<Typewriter
 							options={{
 								strings: ["Desarrollador Front End", "Diseñador Multimedia"],
@@ -34,6 +20,9 @@ export default function Banner() {
 							}}
 						/>
 					</h3>
+					{/*  <h3 className='text-lightBlue font-semibold lg:text-3xl md:text-2x1 mm:text-xl mb-5 tracking-wide'>
+            Desarrollador web, Diseñador multimedia
+          </h3> */}
 
 					<Link
 						activeClass="active"

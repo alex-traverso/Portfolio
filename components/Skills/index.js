@@ -3,15 +3,8 @@ import Titles from "../Titles";
 import { useState } from "react";
 import { useTheme } from "next-themes";
 
-import localFont from "@next/font/local";
-
-const madeOuterRegular = localFont({
-	src: "../../fonts/madeOuter/MADE Outer Sans Regular.otf",
-});
-
 export default function Skills() {
 	const [category, setCategory] = useState("Development");
-
 	const { theme, setTheme } = useTheme();
 
 	return (
@@ -21,9 +14,7 @@ export default function Skills() {
 				className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom  bg:lightDarkBg dark:bg-dark flex flex-col justify-center items-center"
 			>
 				<Titles>HABILIDADES</Titles>
-				<div
-					className={`${madeOuterRegular.className} flex gap-6 font-medium mm:text-xl m:text-[22px] xs:text-2xl text-dark dark:text-white cursor-pointer mb-6`}
-				>
+				<div className="flex gap-6 font-medium mm:text-xl m:text-[22px] xs:text-2xl text-dark dark:text-white cursor-pointer mb-6">
 					<button
 						onClick={() => {
 							setCategory("Development");

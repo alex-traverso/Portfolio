@@ -9,12 +9,6 @@ import Image from "next/image";
 import profilePic from "public/logo.png";
 import ToggleTheme from "../ToggleTheme";
 
-import localFont from "@next/font/local";
-
-const madeOuterRegular = localFont({
-	src: "../../fonts/madeOuter/MADE Outer Sans Regular.otf",
-});
-
 const NavBar = () => {
 	let Links = [
 		{ name: "Sobre Mí", link: "aboutMe" },
@@ -85,7 +79,7 @@ const NavBar = () => {
 					{Links.map((link) => (
 						<li
 							key={link.name}
-							className="mm:mr-9 md:text-lg w-max md:my-0 mt-8 tracking-wide cursor-pointer"
+							className="mm:mr-9 lg:text-xl md:text-lg w-max md:my-0 mt-8 tracking-wide cursor-pointer"
 						>
 							<Link
 								activeClass="active"
@@ -94,7 +88,7 @@ const NavBar = () => {
 								offset={-80}
 								duration={500}
 								to={link.link}
-								className={`${madeOuterRegular.className} text-black dark:text-white hover:text-lightBlue dark:hover:text-lightBlue duration-500`}
+								className="text-black dark:text-white hover:text-lightBlue dark:hover:text-lightBlue duration-500"
 							>
 								{link.name}
 							</Link>
