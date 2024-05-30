@@ -22,7 +22,6 @@ const madeOuterRegular = localFont({
 
 const madeOuterBold = localFont({
 	src: "../public/fonts/madeOuter/MADE Outer Sans Bold.otf",
-
 	variable: "--font-madeOuterBold",
 });
 

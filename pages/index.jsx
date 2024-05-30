@@ -1,7 +1,8 @@
 import Head from "next/head";
 
 //Componentes
-import Banner from "@/components/Banner/index";
+
+import Banner from "@/components/Banner";
 import Skills from "@/components/Skills";
 import Services from "@/components/ServicesComp";
 import Projects from "@/components/Projects";

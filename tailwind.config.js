@@ -18,8 +18,14 @@ module.exports = {
 				darkGrey: "#171717",
 				lightGrey: "#BDBDBD",
 				lightestGrey: "#232323",
-				dark: "#0F0F0F",
+				dark: "#030303",
 				lightBlue: "#4399CE",
+			},
+			backgroundImage: {
+				darkThemeDarkToLight: "linear-gradient(to top, #232323, #030303)",
+				darkThemeLightToDark: "linear-gradient(to top, #030303, #232323)",
+				lightThemeDarkToLight: "linear-gradient(to top, #EDEDED, #BDBDBD)",
+				lightThemeLightToDark: "linear-gradient(to top, #BDBDBD, #EDEDED)",
 			},
 			padding: {
 				sectionTop: "50px",
