@@ -46,8 +46,14 @@ export default function Banner() {
 				</div>
 
 				<div className="absolute top-0 left-0 h-screen w-screen">
-					<video autoPlay loop muted className="h-full w-full object-cover">
-						<source src="/video-banner.mp4" />
+					<video
+						autoPlay
+						loop
+						muted
+						playsInline
+						className="h-full w-full object-cover"
+					>
+						<source src="/video-banner.mp4" type="video/mp4" />
 					</video>
 				</div>
 			</motion.div>
