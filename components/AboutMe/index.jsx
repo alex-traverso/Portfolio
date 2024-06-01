@@ -5,15 +5,6 @@ import Titles from "../Titles";
 import Button from "../Button";
 import { MotionScrollTransition } from "../MotionScrollTransition";
 
-{
-	/* <motion.div
-						initial={{ opacity: 0, y: 50 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 0.3 }}
-						className="rounded-lg mm:w-[280px] m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden"
-					></motion.div> */
-}
-
 export default function AboutMe() {
 	return (
 		<>

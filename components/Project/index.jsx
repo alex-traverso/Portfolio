@@ -3,6 +3,7 @@ import Technology from "../Technology";
 import Github from "../Icons/Github/index";
 import Link from "next/link";
 import { MotionScrollTransition } from "../MotionScrollTransition";
+import Image from "next/image";
 
 export default function Project({
 	src,
@@ -14,15 +15,17 @@ export default function Project({
 	tech,
 }) {
 	return (
-		<MotionScrollTransition className="relative h-[300px] w-[360px]">
-			<img
-				className="w-full h-full object-cover rounded-lg"
+		<MotionScrollTransition className="relative h-[300px] w-[360px] group overflow-hidden rounded-lg">
+			<Image
+				className="w-full h-full object-cover  group-hover:scale-[1.05] transition-all "
 				src={src}
 				alt={alt}
+				width={800}
+				height={800}
 			/>
 			<div className="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
-				<div className="flex flex-col w-full gap-6 absolute bottom-0">
-					<div className="bg-lightestBg dark:bg-lightestGrey p-4 min-h-[120px]">
+				<div className="flex flex-col w-full h-full gap-6 absolute bottom-0">
+					<div className="bg-lightestBg dark:bg-lightestGrey dark:bg-opacity-80 p-4 h-full flex flex-col justify-end">
 						<h2 className=" text-xl text-black dark:text-white font-medium">
 							{title}
 						</h2>
