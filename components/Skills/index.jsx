@@ -121,7 +121,7 @@ export default function Skills() {
 					</button>
 				</MotionScrollTransition>
 
-				<MotionScrollTransition className="flex flex-wrap justify-center items-center gap-6 w-[70vw]">
+				<div className="flex flex-wrap justify-center items-center gap-6 w-[70vw]">
 					{category === "Development" ? (
 						<>
 							{developmentSkills.map((skill) => {
@@ -154,7 +154,7 @@ export default function Skills() {
 							))}
 						</>
 					) : null}
-				</MotionScrollTransition>
+				</div>
 			</section>
 		</>
 	);

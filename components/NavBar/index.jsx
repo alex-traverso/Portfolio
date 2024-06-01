@@ -1,15 +1,14 @@
-"use client";
-
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-//Iconos
-import Menu from "../Icons/Menu/index";
-import Close from "../Icons/Close/index";
+//Icono Menu
+import MenuIcons from "../MenuIcons";
+
 //Imagen logo
 import Image from "next/image";
 import profilePic from "public/logo.png";
 import ToggleTheme from "../ToggleTheme";
-import MenuIcons from "../MenuIcons";
+
+import { motion } from "framer-motion";
 
 const NavBar = () => {
 	let Links = [
@@ -28,7 +27,12 @@ const NavBar = () => {
 
 	return (
 		<>
-			<div className="shadow-md w-full fixed top-0 left-0 z-50">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+				className="shadow-md w-full fixed top-0 left-0 z-50"
+			>
 				<div className="md:flex items-center justify-between bg-light dark:bg-lightestGrey py-4 md:px-10 px-7">
 					<div
 						className="text-2xl cursor-pointer flex items-center
@@ -111,7 +115,7 @@ const NavBar = () => {
 						></div>
 					) : null}
 				</div>
-			</div>
+			</motion.div>
 		</>
 	);
 };
