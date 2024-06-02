@@ -21,7 +21,7 @@ export default function AboutMe() {
 							alt="Logo"
 						/>
 					</MotionScrollTransition>
-					<div className="text-black dark:text-white xl:w-[600px] md:w-[400px] xs:w-[350px] mm:w-[280px] m:w-[300px]">
+					<div className="text-black dark:text-white xl:w-[500px] md:w-[400px] xs:w-[350px] mm:w-[280px] m:w-[300px]">
 						<h2 className="font-madeOuterRegular lg:text-left mb-2 mm:text-center mm:text-3xl">
 							Alex Traverso
 						</h2>
