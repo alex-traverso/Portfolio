@@ -6,7 +6,7 @@ export default function Technology({ tech }) {
 			<Image
 				src={tech.src}
 				alt={tech.name}
-				className="w-5 h-5"
+				className="h-4 w-4 md:w-5 md:h-5"
 				width={20}
 				height={20}
 			/>

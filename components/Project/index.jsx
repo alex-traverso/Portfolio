@@ -24,20 +24,20 @@ export default function Project({
 				height={800}
 			/>
 			<div className="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
-				<div className="flex flex-col w-full h-full gap-6 absolute bottom-0">
-					<div className="bg-lightestBg dark:bg-lightestGrey dark:bg-opacity-80 p-4 h-full flex flex-col justify-end">
+				<div className="absolute flex flex-col w-full h-full bottom-0">
+					<div className="bg-lightestBg dark:bg-lightestGrey bg-opacity-70 dark:bg-opacity-80 p-4 h-full flex flex-col justify-end">
 						<h2 className="text-lg md:text-xl text-black dark:text-white font-medium">
 							{title}
 						</h2>
 						<p className="text-black dark:text-white text-sm">{description}</p>
 
-						<div className="flex gap-2 pt-2">
+						<div className="flex gap-2 pt-3">
 							<Link href={url} target="_blank" rel="noreferrer">
 								<LinkProject
 									width={22}
 									height={22}
 									fill="#4399CE"
-									className="w-[18px] md:w-[22px]"
+									className="w-[18px] md:w-[25px] hover:scale-[1.1] transition-all"
 								/>
 							</Link>
 
@@ -46,7 +46,7 @@ export default function Project({
 									width={22}
 									height={22}
 									stroke="#4399CE"
-									className="w-[18px] md:w-[22px]"
+									className="w-[18px] md:w-[25px] hover:scale-[1.1] transition-all"
 								/>
 							</Link>
 						</div>

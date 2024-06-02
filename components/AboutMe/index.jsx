@@ -14,9 +14,9 @@ export default function AboutMe() {
 			>
 				<Titles>SOBRE MÍ</Titles>
 				<div className="flex lg:flex-row lg:items-start gap-16 transition-all mm:flex-col mm:justify-center mm:items-center mm:w-full">
-					<MotionScrollTransition className="rounded-lg mm:w-[280px] m:w-[300px] md:w-[400px] xs:w-[350px] flex items-center overflow-hidden">
+					<MotionScrollTransition className="rounded-lg mm:w-[280px] m:w-[300px] xs:w-[320px] flex items-center overflow-hidden">
 						<Image
-							className="object-cover w-full h-full object-top drop-shadow-md hover:scale-[1.02] duration-[0.3s]"
+							className="object-cover w-full h-full object-top drop-shadow-md hover:scale-[1.03] duration-[0.3s]"
 							src={profile}
 							alt="Logo"
 						/>
@@ -26,8 +26,16 @@ export default function AboutMe() {
 							Alex Traverso
 						</h2>
 
-						<div className="my-6 mm:text-center lg:text-left">
+						<MotionScrollTransition className="my-6 mm:text-center lg:text-left">
 							<p>
+								¡Hola! Mi nombre es Alex Traverso y soy Desarrollador Front End.
+								Soy apasionado por el mundo del desarrollo la tecnología y el
+								diseño, y disfruto trabajando en equipo. Siempre estoy dispuesto
+								a aprender cosas nuevas para desarrollarme profesionalmente y
+								pertenecer a un equipo en el cual pueda colaborar con mis
+								esfuerzos y adquirir experiencia.
+							</p>
+							{/* <p>
 								¡Hola! Mi nombre es Alex Traverso y soy un Desarrollador Front
 								End. Soy una persona apasionada por el mundo del desarrollo y
 								tecnología, además de trabajar en equipo. Mis principales
@@ -46,8 +54,8 @@ export default function AboutMe() {
 								Siempre estoy dispuesto a aprender cosas nuevas para
 								desarrollarme profesionalmente y pertenecer a un equipo en el
 								cual pueda colaborar con mis esfuerzos y adquirir experiencia.
-							</p>
-						</div>
+							</p> */}
+						</MotionScrollTransition>
 						<MotionScrollTransition className=" lg:block mm:flex mm:justify-center">
 							<Button
 								href="/CV - Alex Traverso.pdf"

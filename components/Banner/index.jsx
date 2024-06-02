@@ -1,16 +1,10 @@
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
 
 export default function Banner() {
 	return (
 		<>
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1 }}
-				transition={{ duration: 1.5 }}
-				className="relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden"
-			>
+			<div className="relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden">
 				<div className="absolute z-10 flex flex-col justify-center items-start bg-black lg:px-sectionSides mm:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]">
 					<div>
 						<h1
@@ -56,7 +50,7 @@ export default function Banner() {
 						<source src="/video-banner.mp4" type="video/mp4" />
 					</video>
 				</div>
-			</motion.div>
+			</div>
 		</>
 	);
 }

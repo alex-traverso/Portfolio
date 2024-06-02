@@ -13,6 +13,8 @@ import NavBar from "@/components/NavBar";
 import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
 
+import { motion } from "framer-motion";
+
 export default function Home() {
 	return (
 		<>
@@ -25,7 +27,12 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/logo.png" />
 			</Head>
-			<main id="home">
+			<motion.main
+				id="home"
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1.5 }}
+			>
 				<NavBar />
 				<Banner />
 				<SocialMedia />
@@ -35,7 +42,7 @@ export default function Home() {
 				<Projects />
 				<Contact />
 				<Footer />
-			</main>
+			</motion.main>
 		</>
 	);
 }
