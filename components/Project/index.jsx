@@ -17,7 +17,7 @@ export default function Project({
 	return (
 		<MotionScrollTransition className="relative w-[300px] h-[240px] md:h-[300px] md:w-[360px] group overflow-hidden rounded-lg">
 			<Image
-				className="w-full h-full object-cover  group-hover:scale-[1.05] transition-all "
+				className="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-1 transition-all "
 				src={src}
 				alt={alt}
 				width={800}
