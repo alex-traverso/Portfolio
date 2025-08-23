@@ -1,25 +1,24 @@
-import React from "react";
-
-import { motion, useScroll, useTransform } from "framer-motion";
+"use client";
 import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export const MotionScrollTransition = ({ children, className }) => {
-	const ref = useRef(null);
+  const ref = useRef(null);
 
-	const { scrollYProgress } = useScroll({
-		target: ref,
-		offset: ["0 1", "1.3 1"],
-	});
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.3 1"],
+  });
 
-	const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
 
-	return (
-		<motion.div
-			className={className}
-			ref={ref}
-			style={{ y: scaleProgress, opacity: scrollYProgress }}
-		>
-			{children}
-		</motion.div>
-	);
+  return (
+    <motion.div
+      className={className}
+      ref={ref}
+      style={{ y: scaleProgress, opacity: scrollYProgress }}
+    >
+      {children}
+    </motion.div>
+  );
 };
