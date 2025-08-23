@@ -1,9 +1,11 @@
 "use client";
+
+import * as React from "react";
 import "/styles/global.css";
 import { ThemeProvider } from "next-themes";
 import { Roboto, Inter } from "next/font/google";
 import localFont from "next/font/local";
-import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,23 +27,26 @@ const madeOuterBold = localFont({
   variable: "--font-madeOuterBold",
 });
 
+const NextThemesProvider = dynamic(
+  () => import("next-themes").then((mod) => mod.ThemeProvider),
+  {
+    ssr: false,
+  }
+);
+
 export default function RootLayout({ children }) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${inter.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
       >
-        {mounted ? (
-          <ThemeProvider enableSystem={true} attribute="class">
-            {children}
-          </ThemeProvider>
-        ) : null}
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          {children}
+        </NextThemesProvider>
       </body>
     </html>
   );

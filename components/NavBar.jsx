@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Link } from "react-scroll";
-import MenuIcons from "../MenuIcons";
+import MenuIcons from "./Icons/MenuIcons";
 import Image from "next/image";
 import profilePic from "public/logo.png";
-import ToggleTheme from "../ToggleTheme";
+import ToggleTheme from "./ToggleTheme";
 import { motion } from "framer-motion";
 
 const NavBar = () => {

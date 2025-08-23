@@ -142,9 +142,9 @@
 import { useState, useRef } from "react";
 import { validateForm } from "@/validate/validateForm";
 import useValidation from "@/hooks/useValidation";
-import Titles from "../Titles";
-import Button from "../Button";
-import Check from "../Icons/Check/index";
+import Titles from "./Titles";
+import Button from "./Button";
+import Check from "./Icons/Check";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Contact() {

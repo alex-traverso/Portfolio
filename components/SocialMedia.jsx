@@ -1,7 +1,7 @@
-import Github from "../Icons/Github/index";
-import Instagram from "../Icons/Instagram/index";
-import Linkedin from "../Icons/Linkedin/index";
-import Email from "../Icons/Email/index";
+import Github from "./Icons/Github";
+import Instagram from "./Icons/Instagram";
+import Linkedin from "./Icons/Linkedin";
+import Email from "./Icons/Email";
 import Link from "next/link";
 
 export default function SocialMedia() {

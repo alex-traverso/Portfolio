@@ -1,9 +1,9 @@
 "use client";
-import Titles from "../Titles";
+import Titles from "./Titles";
 import { useState } from "react";
 import { useTheme } from "next-themes";
-import SkillsCard from "../SkillsCard";
-import { MotionScrollTransition } from "../MotionScrollTransition";
+import SkillsCard from "./SkillsCard";
+import { MotionScrollTransition } from "./MotionScrollTransition";
 
 export default function Skills() {
   const [category, setCategory] = useState("Development");

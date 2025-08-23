@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import profile from "public/profile.png";
-import Titles from "../Titles";
-import Button from "../Button";
-import { MotionScrollTransition } from "../MotionScrollTransition";
+import Titles from "./Titles";
+import Button from "./Button";
+import { MotionScrollTransition } from "./MotionScrollTransition";
 
 export default function AboutMe() {
   return (
