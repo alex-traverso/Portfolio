@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Project from "../Project";
+import Project from "./Project";
 import { projectsData } from "@/projectsData";
-import Arrow from "../Icons/Arrow/index";
-import { MotionScrollTransition } from "../MotionScrollTransition";
+import Arrow from "./Icons/Arrow";
+import { MotionScrollTransition } from "./MotionScrollTransition";
 
 {
   /* <div className="lg:grid lg:grid-cols-4 lg:grid-rows-5 lg:gap-x-2 lg:gap-y-3 lg:h-[70rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3">

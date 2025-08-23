@@ -1,5 +1,5 @@
-import ServicesCard from "../ServicesCard";
-import Titles from "../Titles";
+import ServicesCard from "./ServicesCard";
+import Titles from "./Titles";
 
 export default function Services() {
   return (

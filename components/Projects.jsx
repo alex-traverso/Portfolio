@@ -1,5 +1,5 @@
-import Titles from "../Titles";
-import ProjectGallery from "../ProjectGallery";
+import Titles from "./Titles";
+import ProjectGallery from "./ProjectGallery";
 
 export default function Projects() {
   return (
