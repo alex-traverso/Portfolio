@@ -5,7 +5,7 @@ import Arrow from "../Icons/Arrow/index";
 import { MotionScrollTransition } from "../MotionScrollTransition";
 
 {
-	/* <div className="lg:grid lg:grid-cols-4 lg:grid-rows-5 lg:gap-x-2 lg:gap-y-3 lg:h-[70rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3">
+  /* <div className="lg:grid lg:grid-cols-4 lg:grid-rows-5 lg:gap-x-2 lg:gap-y-3 lg:h-[70rem] lg:w-[70vw] smm:grid smm:grid-cols-2 smm:gap-x-2 smm:gap-y-4 mm:grid mm:gap-y-3">
 	<div className="rounded-lg shadow-xl lg:row-span-2 lg:col-span-2 lg:h-auto  mm:h-[250px]">
 		<Project
 			title="Devter"
@@ -131,34 +131,34 @@ import { MotionScrollTransition } from "../MotionScrollTransition";
 </div> */
 }
 export default function ProjectGallery() {
-	return (
-		<div className="flex flex-col items-center justify-center w-max">
-			<div className="flex justify-center mt-4">
-				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4">
-					{projectsData.map((project) => (
-						<Project
-							key={project.title}
-							src={project.src}
-							alt={project.alt}
-							title={project.title}
-							description={project.description}
-							github={project.github}
-							url={project.url}
-							tech={project.tech}
-						/>
-					))}
-				</div>
-			</div>
-			<MotionScrollTransition className="w-full flex justify-start max-w-screen-xl mt-4">
-				<Link
-					href="https://github.com/alex-traverso"
-					target="_blank"
-					className="cursor-pointer lg:text-base lg:font-medium lg:px-5 smm:px-5 smm:py-2 mm:px-4 mm:py-2 mm:text-sm mm:font-medium text-black dark:text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-widest flex items-center text-center"
-				>
-					<span className="whitespace-nowrap">Ver más</span>
-					<Arrow className="ml-2 h-5 fill-white" />
-				</Link>
-			</MotionScrollTransition>
-		</div>
-	);
+  return (
+    <div className="flex flex-col items-center justify-center w-max">
+      <div className="flex justify-center mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4">
+          {projectsData.map((project) => (
+            <Project
+              key={project.title}
+              src={project.src}
+              alt={project.alt}
+              title={project.title}
+              description={project.description}
+              github={project.github}
+              url={project.url}
+              tech={project.tech}
+            />
+          ))}
+        </div>
+      </div>
+      <MotionScrollTransition className="w-full flex justify-start max-w-screen-xl mt-4">
+        <Link
+          href="https://github.com/alex-traverso"
+          target="_blank"
+          className="cursor-pointer lg:text-base lg:font-medium lg:px-5 smm:px-5 smm:py-2 mm:px-4 mm:py-2 mm:text-sm mm:font-medium text-black dark:text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-widest flex items-center text-center"
+        >
+          <span className="whitespace-nowrap">Ver más</span>
+          <Arrow className="ml-2 h-5 fill-white" />
+        </Link>
+      </MotionScrollTransition>
+    </div>
+  );
 }
