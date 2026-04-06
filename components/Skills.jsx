@@ -9,56 +9,58 @@ export default function Skills() {
   const [category, setCategory] = useState("Development");
   const { theme, setTheme } = useTheme();
 
+  const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
+
   const developmentSkills = [
     {
-      src: "/DevelopmentIcons/html.svg",
+      src: `${baseUrl}development-icons/html.svg`,
       title: "HTML5",
       alt: "HTML5",
     },
     {
-      src: "/DevelopmentIcons/css.svg",
+      src: `${baseUrl}development-icons/css.svg`,
       alt: "CSS",
       title: "CSS",
     },
     {
-      src: "/DevelopmentIcons/javascript.svg",
+      src: `${baseUrl}development-icons/javascript.svg`,
       alt: "Javascript",
       title: "Javascript",
     },
     {
-      src: "/DevelopmentIcons/reactJs.svg",
+      src: `${baseUrl}development-icons/react-js.svg`,
       alt: "React Js",
       title: "React Js",
     },
     {
       src: {
-        lightThemeSrc: "/DevelopmentIcons/nextLight.svg",
-        darkThemeSrc: "/DevelopmentIcons/nextDark.svg",
+        lightThemeSrc: `${baseUrl}development-icons/next-light.svg`,
+        darkThemeSrc: `${baseUrl}development-icons/next-dark.svg`,
       },
       alt: "Next Js",
       title: "Next Js",
     },
     {
-      src: "/DevelopmentIcons/mongodb.svg",
+      src: `${baseUrl}development-icons/mongodb.svg`,
       alt: "MongoDB",
       title: "MongoDB",
     },
 
     {
-      src: "/DevelopmentIcons/firebase.svg",
+      src: `${baseUrl}development-icons/firebase.svg`,
       alt: "Firebase",
       title: "Firebase",
     },
 
-    { src: "/DevelopmentIcons/git.svg", alt: "Git", title: "Git" },
+    { src: `${baseUrl}development-icons/git.svg`, alt: "Git", title: "Git" },
 
     {
-      src: "/DevelopmentIcons/bootstrap.svg",
+      src: `${baseUrl}development-icons/bootstrap.svg`,
       alt: "Bootstrap",
       title: "Bootstrap",
     },
     {
-      src: "/DevelopmentIcons/tailwind.svg",
+      src: `${baseUrl}development-icons/tailwind.svg`,
       alt: "Talwind CSS",
       title: "Talwind CSS",
     },
@@ -66,22 +68,22 @@ export default function Skills() {
 
   const designSkills = [
     {
-      src: "/DesignIcons/illustrator.svg",
+      src: `${baseUrl}design-icons/illustrator.svg`,
       alt: "Adobe Illustrator",
       title: "Adobe Illustrator",
     },
     {
-      src: "/DesignIcons/photoshop.svg",
+      src: `${baseUrl}design-icons/photoshop.svg`,
       alt: "Adobe Photoshop",
       title: "Adobe Photoshop",
     },
     {
-      src: "/DesignIcons/premiere.svg",
+      src: `${baseUrl}design-icons/premiere.svg`,
       alt: "Adobe Premiere",
       title: "Adobe Premiere",
     },
     {
-      src: "/DesignIcons/figma.svg",
+      src: `${baseUrl}design-icons/figma.svg`,
       alt: "Figma",
       title: "Figma",
     },

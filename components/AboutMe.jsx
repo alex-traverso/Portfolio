@@ -35,30 +35,10 @@ export default function AboutMe() {
                 pertenecer a un equipo en el cual pueda colaborar con mis
                 esfuerzos y adquirir experiencia.
               </p>
-              {/* <p>
-								¡Hola! Mi nombre es Alex Traverso y soy un Desarrollador Front
-								End. Soy una persona apasionada por el mundo del desarrollo y
-								tecnología, además de trabajar en equipo. Mis principales
-								habilidades son:
-								<br />
-								<br />
-								HTML5 | CSS | JAVASCRIPT | REACT JS | NEXT JS | GIT
-								<br />
-								<br />
-								Aunque tengo conocimientos acerca de:
-								<br />
-								<br />
-								REDUX | NODEJS | EXPRESS | MONGODB | MONGOOSE.
-								<br />
-								<br />
-								Siempre estoy dispuesto a aprender cosas nuevas para
-								desarrollarme profesionalmente y pertenecer a un equipo en el
-								cual pueda colaborar con mis esfuerzos y adquirir experiencia.
-							</p> */}
             </MotionScrollTransition>
             <MotionScrollTransition className=" lg:block mm:flex mm:justify-center">
               <Button
-                href="/CV - Alex Traverso.pdf"
+                href="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/CV%20-%20Alex%20Traverso.pdf"
                 target="_blank"
                 rel="noreferrer"
               >

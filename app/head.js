@@ -14,7 +14,10 @@ export default function Head() {
       <meta name="geo.placename" content="Belén de Escobar" />
       <meta name="geo.position" content="-34.3483;-58.7997" />
       <meta name="ICBM" content="-34.3483, -58.7997" />
-      <link rel="icon" href="/logo.png" />
+      <link
+        rel="icon"
+        href="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/logo.png"
+      />
     </>
   );
 }

@@ -55,7 +55,6 @@ export default function Project({
                 <Technology key={index} tech={tech} />
               ))}
             </div>
-            {/* <Technology tech={tech} /> */}
           </div>
         </div>
       </div>

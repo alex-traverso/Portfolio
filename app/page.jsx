@@ -1,9 +1,12 @@
 import HomePageContainer from "@/components/HomepageContainer";
+import { getProjects } from "@/actions/projects";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const projects = await getProjects();
+
   return (
     <>
-      <HomePageContainer />
+      <HomePageContainer projects={projects} />
     </>
   );
 }

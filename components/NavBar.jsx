@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import MenuIcons from "./Icons/MenuIcons";
 import Image from "next/image";
-import profilePic from "public/logo.png";
 import ToggleTheme from "./ToggleTheme";
 import { motion } from "framer-motion";
 
@@ -46,9 +45,10 @@ const NavBar = () => {
             >
               <Image
                 className="mr-1 pt-2"
-                src={profilePic}
+                src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/logo.png"
                 alt="Logo"
                 height={45}
+                width={45}
               />
             </Link>
           </div>

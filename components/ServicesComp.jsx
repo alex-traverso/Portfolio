@@ -2,6 +2,8 @@ import ServicesCard from "./ServicesCard";
 import Titles from "./Titles";
 
 export default function Services() {
+  const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
+
   return (
     <>
       <div
@@ -14,19 +16,19 @@ export default function Services() {
 
         <div className="flex flex-wrap justify-center items-center gap-6 w-[70vw]">
           <ServicesCard
-            src="/uxui-icon.svg"
+            src={`${baseUrl}uxui-icon.svg`}
             alt="Diseño UX - UI"
             title="Diseño UX - UI"
             description="Desarrollo de interfaz y experiencia de usuario de la manera más óptima posible."
           />
           <ServicesCard
-            src="/design-icon.svg"
+            src={`${baseUrl}design-icon.svg`}
             alt="Diseño web y gráfico"
             title="Diseño web y gráfico"
             description="Diseños modernos y minimalistas para tus sitios web o identidad visual."
           />
           <ServicesCard
-            src="/development-icon.svg"
+            src={`${baseUrl}development-icon.svg`}
             alt="Desarrollo de aplicaciones web"
             title="Desarrollo de aplicaciones web"
             description="Desarrollo de aplicaciones web con tecnologías como Javascript, React Js, Next Js."
