@@ -49,7 +49,7 @@ const NavBar = () => {
             >
               <Image
                 className="mr-1 pt-2"
-                src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/logo.png"
+                src="/logo.png"
                 alt="Logo"
                 height={45}
                 width={45}

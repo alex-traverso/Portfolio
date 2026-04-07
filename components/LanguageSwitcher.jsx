@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "next/navigation";
-import { useTransition } from "react";
+import { useTransition, Fragment } from "react";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -24,7 +24,7 @@ export default function LanguageSwitcher() {
       aria-label="Selector de idioma"
     >
       {["es", "en"].map((lang, i) => (
-        <>
+        <Fragment key={lang}>
           {i === 1 && (
             <span
               key="divider"
@@ -33,7 +33,6 @@ export default function LanguageSwitcher() {
             />
           )}
           <button
-            key={lang}
             onClick={() => switchLocale(lang)}
             aria-pressed={locale === lang}
             disabled={isPending}
@@ -47,7 +46,7 @@ export default function LanguageSwitcher() {
           >
             {lang.toUpperCase()}
           </button>
-        </>
+        </Fragment>
       ))}
     </div>
   );

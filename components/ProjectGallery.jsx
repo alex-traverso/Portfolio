@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Project from "./Project";
-// import { projectsData } from "@/projectsData";
 import Arrow from "./Icons/Arrow";
 import { MotionScrollTransition } from "./MotionScrollTransition";
 import { useTranslations } from "next-intl";
