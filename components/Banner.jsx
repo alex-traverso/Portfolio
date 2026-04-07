@@ -1,7 +1,10 @@
 import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 
 export default function Banner() {
+  const t = useTranslations("banner");
+
   return (
     <>
       <div className="relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden">
@@ -17,7 +20,7 @@ export default function Banner() {
           <h3 className="text-lightBlue font-madeOuterRegular lg:text-3xl md:text-2x1 mm:text-xl mb-5 tracking-wide">
             <Typewriter
               options={{
-                strings: ["Desarrollador Front End", "Diseñador Multimedia"],
+                strings: [t("fullstackDeveloper"), t("multimediaDesigner")],
                 autoStart: true,
                 loop: true,
                 skipAddStyles: true,
@@ -35,7 +38,7 @@ export default function Banner() {
             offset={-80}
             duration={500}
           >
-            CONTACTO
+            {t("contact")}
           </Link>
         </div>
 
@@ -47,7 +50,10 @@ export default function Banner() {
             playsInline
             className="h-full w-full object-cover"
           >
-            <source src="/video-banner.mp4" type="video/mp4" />
+            <source
+              src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/video-banner.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
       </div>

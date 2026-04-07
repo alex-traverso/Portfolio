@@ -4,61 +4,66 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import SkillsCard from "./SkillsCard";
 import { MotionScrollTransition } from "./MotionScrollTransition";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
   const [category, setCategory] = useState("Development");
   const { theme, setTheme } = useTheme();
 
+  const t = useTranslations("skills");
+
+  const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
+
   const developmentSkills = [
     {
-      src: "/DevelopmentIcons/html.svg",
+      src: `${baseUrl}development-icons/html.svg`,
       title: "HTML5",
       alt: "HTML5",
     },
     {
-      src: "/DevelopmentIcons/css.svg",
+      src: `${baseUrl}development-icons/css.svg`,
       alt: "CSS",
       title: "CSS",
     },
     {
-      src: "/DevelopmentIcons/javascript.svg",
+      src: `${baseUrl}development-icons/javascript.svg`,
       alt: "Javascript",
       title: "Javascript",
     },
     {
-      src: "/DevelopmentIcons/reactJs.svg",
+      src: `${baseUrl}development-icons/react-js.svg`,
       alt: "React Js",
       title: "React Js",
     },
     {
       src: {
-        lightThemeSrc: "/DevelopmentIcons/nextLight.svg",
-        darkThemeSrc: "/DevelopmentIcons/nextDark.svg",
+        lightThemeSrc: `${baseUrl}development-icons/next-light.svg`,
+        darkThemeSrc: `${baseUrl}development-icons/next-dark.svg`,
       },
       alt: "Next Js",
       title: "Next Js",
     },
     {
-      src: "/DevelopmentIcons/mongodb.svg",
+      src: `${baseUrl}development-icons/mongodb.svg`,
       alt: "MongoDB",
       title: "MongoDB",
     },
 
     {
-      src: "/DevelopmentIcons/firebase.svg",
+      src: `${baseUrl}development-icons/firebase.svg`,
       alt: "Firebase",
       title: "Firebase",
     },
 
-    { src: "/DevelopmentIcons/git.svg", alt: "Git", title: "Git" },
+    { src: `${baseUrl}development-icons/git.svg`, alt: "Git", title: "Git" },
 
     {
-      src: "/DevelopmentIcons/bootstrap.svg",
+      src: `${baseUrl}development-icons/bootstrap.svg`,
       alt: "Bootstrap",
       title: "Bootstrap",
     },
     {
-      src: "/DevelopmentIcons/tailwind.svg",
+      src: `${baseUrl}development-icons/tailwind.svg`,
       alt: "Talwind CSS",
       title: "Talwind CSS",
     },
@@ -66,22 +71,22 @@ export default function Skills() {
 
   const designSkills = [
     {
-      src: "/DesignIcons/illustrator.svg",
+      src: `${baseUrl}design-icons/illustrator.svg`,
       alt: "Adobe Illustrator",
       title: "Adobe Illustrator",
     },
     {
-      src: "/DesignIcons/photoshop.svg",
+      src: `${baseUrl}design-icons/photoshop.svg`,
       alt: "Adobe Photoshop",
       title: "Adobe Photoshop",
     },
     {
-      src: "/DesignIcons/premiere.svg",
+      src: `${baseUrl}design-icons/premiere.svg`,
       alt: "Adobe Premiere",
       title: "Adobe Premiere",
     },
     {
-      src: "/DesignIcons/figma.svg",
+      src: `${baseUrl}design-icons/figma.svg`,
       alt: "Figma",
       title: "Figma",
     },
@@ -93,7 +98,7 @@ export default function Skills() {
         id="skills"
         className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeLightToDark dark:bg-darkThemeLightToDark flex flex-col justify-center items-center"
       >
-        <Titles>HABILIDADES</Titles>
+        <Titles>{t("title").toUpperCase()}</Titles>
         <MotionScrollTransition className="flex gap-6 font-madeOuterRegular font-medium mm:text-xl m:text-[22px] xs:text-2xl text-dark dark:text-white cursor-pointer mb-8">
           <button
             onClick={() => {
@@ -105,7 +110,7 @@ export default function Skills() {
                 : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
             }`}
           >
-            Desarrollo Web
+            {t("development")}
           </button>
           <button
             onClick={() => {
@@ -117,7 +122,7 @@ export default function Skills() {
                 : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
             }
           >
-            Diseño
+            {t("design")}
           </button>
         </MotionScrollTransition>
 

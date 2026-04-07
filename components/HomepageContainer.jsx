@@ -10,7 +10,7 @@ import SocialMedia from "@/components/SocialMedia";
 import AboutMe from "@/components/AboutMe";
 import { motion } from "framer-motion";
 
-export default function HomePageContainer() {
+export default function HomePageContainer({ projects }) {
   return (
     <motion.main
       id="home"
@@ -24,7 +24,7 @@ export default function HomePageContainer() {
       <AboutMe />
       <Skills />
       <Services />
-      <Projects />
+      <Projects projects={projects} />
       <Contact />
       <Footer />
     </motion.main>
