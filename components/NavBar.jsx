@@ -1,19 +1,22 @@
 "use client";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Link } from "react-scroll";
 import MenuIcons from "./Icons/MenuIcons";
 import Image from "next/image";
-import profilePic from "public/logo.png";
 import ToggleTheme from "./ToggleTheme";
 import { motion } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const NavBar = () => {
+  const t = useTranslations("navbar");
+
   let Links = [
-    { name: "Sobre Mí", link: "aboutMe" },
-    { name: "Habilidades", link: "skills" },
-    { name: "Servicios", link: "services" },
-    { name: "Proyectos", link: "projects" },
-    { name: "Contacto", link: "contact" },
+    { name: t("aboutMe"), link: "aboutMe" },
+    { name: t("skills"), link: "skills" },
+    { name: t("services"), link: "services" },
+    { name: t("projects"), link: "projects" },
+    { name: t("contact"), link: "contact" },
   ];
 
   const [open, setOpen] = useState(false);
@@ -46,9 +49,10 @@ const NavBar = () => {
             >
               <Image
                 className="mr-1 pt-2"
-                src={profilePic}
+                src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/logo.png"
                 alt="Logo"
                 height={45}
+                width={45}
               />
             </Link>
           </div>
@@ -82,8 +86,9 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <div className="mm:mt-4 md:mt-0 md:mr-0">
+            <div className="flex flex-col items-end space-y-4 mm:mt-4 md:mt-0 md:mr-0 lg:flex lg:flex-row lg:space-y-0 lg:items-center lg:gap-x-4">
               <ToggleTheme />
+              <LanguageSwitcher />
             </div>
           </ul>
           {open ? (
