@@ -3,9 +3,11 @@
 import * as React from "react";
 import "/styles/global.css";
 import { ThemeProvider } from "next-themes";
+import { NextIntlClientProvider } from "next-intl";
 import { Roboto, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import dynamic from "next/dynamic";
+import { useParams } from "next/navigation";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -18,12 +20,12 @@ const inter = Inter({
 });
 
 const madeOuterRegular = localFont({
-  src: "../public/fonts/madeOuter/MADE Outer Sans Regular.otf",
+  src: "../../public/fonts/madeOuter/MADE Outer Sans Regular.otf",
   variable: "--font-madeOuterRegular",
 });
 
 const madeOuterBold = localFont({
-  src: "../public/fonts/madeOuter/MADE Outer Sans Bold.otf",
+  src: "../../public/fonts/madeOuter/MADE Outer Sans Bold.otf",
   variable: "--font-madeOuterBold",
 });
 
@@ -31,12 +33,16 @@ const NextThemesProvider = dynamic(
   () => import("next-themes").then((mod) => mod.ThemeProvider),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function RootLayout({ children }) {
+  const { locale } = useParams();
+
+  const messages = require(`../../messages/${locale}.json`);
+
   return (
-    <html lang="es" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={`${inter.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
       >
@@ -45,7 +51,9 @@ export default function RootLayout({ children }) {
           defaultTheme="system"
           enableSystem
         >
-          {children}
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+          </NextIntlClientProvider>
         </NextThemesProvider>
       </body>
     </html>

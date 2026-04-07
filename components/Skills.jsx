@@ -4,10 +4,13 @@ import { useState } from "react";
 import { useTheme } from "next-themes";
 import SkillsCard from "./SkillsCard";
 import { MotionScrollTransition } from "./MotionScrollTransition";
+import { useTranslations } from "next-intl";
 
 export default function Skills() {
   const [category, setCategory] = useState("Development");
   const { theme, setTheme } = useTheme();
+
+  const t = useTranslations("skills");
 
   const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
 
@@ -95,7 +98,7 @@ export default function Skills() {
         id="skills"
         className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeLightToDark dark:bg-darkThemeLightToDark flex flex-col justify-center items-center"
       >
-        <Titles>HABILIDADES</Titles>
+        <Titles>{t("title").toUpperCase()}</Titles>
         <MotionScrollTransition className="flex gap-6 font-madeOuterRegular font-medium mm:text-xl m:text-[22px] xs:text-2xl text-dark dark:text-white cursor-pointer mb-8">
           <button
             onClick={() => {
@@ -107,7 +110,7 @@ export default function Skills() {
                 : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
             }`}
           >
-            Desarrollo Web
+            {t("development")}
           </button>
           <button
             onClick={() => {
@@ -119,7 +122,7 @@ export default function Skills() {
                 : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
             }
           >
-            Diseño
+            {t("design")}
           </button>
         </MotionScrollTransition>
 

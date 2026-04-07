@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import ServicesCard from "./ServicesCard";
 import Titles from "./Titles";
 
 export default function Services() {
+  const t = useTranslations("services");
+
   const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
 
   return (
@@ -11,27 +14,27 @@ export default function Services() {
         className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeDarkToLight dark:bg-darkThemeDarkToLight flex flex-col justify-center items-center"
       >
         <div>
-          <Titles>SERVICIOS</Titles>
+          <Titles>{t("title").toUpperCase()}</Titles>
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-6 w-[70vw]">
           <ServicesCard
             src={`${baseUrl}uxui-icon.svg`}
-            alt="Diseño UX - UI"
-            title="Diseño UX - UI"
-            description="Desarrollo de interfaz y experiencia de usuario de la manera más óptima posible."
+            alt={t("uxuiAlt")}
+            title={t("uxuiTitle")}
+            description={t("uxuiDescription")}
           />
           <ServicesCard
             src={`${baseUrl}design-icon.svg`}
-            alt="Diseño web y gráfico"
-            title="Diseño web y gráfico"
-            description="Diseños modernos y minimalistas para tus sitios web o identidad visual."
+            alt={t("designAlt")}
+            title={t("designTitle")}
+            description={t("designDescription")}
           />
           <ServicesCard
             src={`${baseUrl}development-icon.svg`}
-            alt="Desarrollo de aplicaciones web"
-            title="Desarrollo de aplicaciones web"
-            description="Desarrollo de aplicaciones web con tecnologías como Javascript, React Js, Next Js."
+            alt={t("developmentAlt")}
+            title={t("developmentTitle")}
+            description={t("developmentDescription")}
           />
         </div>
       </div>

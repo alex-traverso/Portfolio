@@ -1,0 +1,49 @@
+{
+  "navbar": {
+    "aboutMe": "About Me",
+    "skills": "Skills",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "banner": {
+    "fullstackDeveloper": "Full Stack Developer",
+    "multimediaDesigner": "Multimedia Designer",
+    "contact": "Contact"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description": "Hello! My name is Alex Traverso and I am a Full Stack Developer. I am passionate about the world of development, technology, and design, and I enjoy working in a team. I am always willing to learn new things to develop professionally and be part of a team where I can contribute with my efforts and gain experience.",
+    "resume": "Download Resume"
+  },
+  "skills": {
+    "title": "Skills",
+    "development": "Web Development",
+    "design": "Design"
+  },
+  "services": {
+    "title": "Services",
+    "uxuiTitle": "UX - UI Design",
+    "uxuiDescription": "Optimized interfaces for an exceptional user experience",
+    "uxuiAlt": "UX - UI Design",
+    "designTitle": "Web and Graphic Design",
+    "designDescription": "Modern and minimalist designs that enhance your brand",
+    "designAlt": "Web and Graphic Design",
+    "developmentTitle": "Web Application Development",
+    "developmentDescription": "Web application development with modern technologies (JavaScript, React, Next.js)",
+    "developmentAlt": "Web Application Development"
+  },
+  "projects": {
+    "title": "Projects",
+    "seeMore": "See more"
+  },
+  "contact": {
+    "title": "Contact",
+    "name": "Name",
+    "email": "Email",
+    "message": "Leave a message",
+    "successMessage": "The message was sent successfully",
+    "close": "Close",
+    "send": "Send"
+  }
+}
