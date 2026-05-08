@@ -29,7 +29,7 @@ export default function ProjectGallery({ projects }) {
         <Link
           href="https://github.com/alex-traverso"
           target="_blank"
-          className="cursor-pointer lg:text-base lg:font-medium lg:px-5 smm:px-5 smm:py-2 mm:px-4 mm:py-2 mm:text-sm mm:font-medium text-black dark:text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-widest flex items-center text-center"
+          className="cursor-pointer lg:text-base lg:font-medium lg:px-5 smm:px-5 smm:py-2 mm:px-4 mm:py-2 mm:text-sm mm:font-medium text-black dark:text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-wide flex items-center text-center"
         >
           <span className="whitespace-nowrap">{t("seeMore")}</span>
           <Arrow className="ml-2 h-5 fill-white" />

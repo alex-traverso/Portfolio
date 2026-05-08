@@ -22,7 +22,6 @@ export default function Project({
         alt={alt}
         width={800}
         height={800}
-        unoptimized
       />
       <div className="absolute bottom-0 w-full h-full overflow-hidden opacity-0 hover:opacity-100 transition-all">
         <div className="absolute flex flex-col w-full h-full bottom-0">
