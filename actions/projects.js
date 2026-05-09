@@ -1,13 +1,16 @@
 import { supabase } from "@/utils/supabaseClient";
 
 export async function getProjects(locale) {
-  const { data, error } = await supabase.from("projects").select(`
-    *,
-    project_techs (
+  const { data, error } = await supabase
+    .from("projects")
+    .select(`
       *,
-      techs (*)
-    )
-  `);
+      project_techs (
+        *,
+        techs (*)
+      )
+    `)
+    .eq("active", true);
   if (error) throw error;
 
   return data.map((project) => ({
