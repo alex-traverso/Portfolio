@@ -7,7 +7,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function LegalHeader({ locale }) {
   return (
-    <header className="w-full bg-light dark:bg-lightestGrey shadow-md">
+    <header className="fixed top-0 left-0 z-50 w-full bg-light dark:bg-lightestGrey shadow-md">
       <div className="flex items-center justify-between py-4 md:px-10 px-7">
         <Link href={`/${locale}`} className="flex items-center cursor-pointer">
           <Image

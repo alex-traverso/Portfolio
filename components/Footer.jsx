@@ -19,13 +19,13 @@ export default function Footer() {
       >
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link
-            href={`/${locale}/politica-de-privacidad`}
+            href={`/${locale}/privacy-policy`}
             className="text-black dark:text-zinc-300 hover:text-lightBlue dark:hover:text-lightBlue transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
           >
             {t("privacyLink")}
           </Link>
           <Link
-            href={`/${locale}/terminos-de-servicio`}
+            href={`/${locale}/terms-of-service`}
             className="text-black dark:text-zinc-300 hover:text-lightBlue dark:hover:text-lightBlue transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
           >
             {t("termsLink")}
