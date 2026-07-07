@@ -44,6 +44,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${inter.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
       >
         <NextThemesProvider

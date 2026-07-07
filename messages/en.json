@@ -45,5 +45,9 @@
     "successMessage": "The message was sent successfully",
     "close": "Close",
     "send": "Send"
+  },
+  "legal": {
+    "privacyLink": "Privacy Policy",
+    "termsLink": "Terms of Service"
   }
 }
