@@ -33,7 +33,7 @@ export default function LegalPage({ content, locale }) {
     <div className="min-h-screen bg-lightestBg dark:bg-dark text-darkGrey dark:text-lightGrey themeTransition flex flex-col">
       <LegalHeader locale={locale} />
 
-      <main className="flex-1 lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom">
+      <main className="flex-1 lg:px-sectionSides mm:px-sectionSidesMobile pt-32 pb-sectionBottom">
         <article className="max-w-3xl mx-auto">
           <h1 className="font-madeOuterRegular text-lightBlue text-3xl md:text-4xl font-bold mb-2">
             {content.heading}
