@@ -15,6 +15,7 @@ insert into public.techs (name, src, src_dark, category, show_in_skills, display
   ('Next Js',      'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/next-light.svg',
                    'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/next-dark.svg', 'development', true, 70),
   ('Node.js',      'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/nodejs.svg',     null, 'development', true, 80),
+  ('NestJS',       'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/nestjs.svg',     null, 'development', true, 85),
   ('Tailwind CSS', 'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/tailwind.svg',   null, 'development', true, 90),
   ('Bootstrap',    'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/bootstrap.svg',  null, 'development', true, 100),
   ('Redux',        'https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/development-icons/redux.svg',      null, 'development', true, 110),
