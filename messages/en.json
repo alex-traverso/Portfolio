@@ -19,7 +19,10 @@
   "skills": {
     "title": "Skills",
     "development": "Web Development",
-    "design": "Design"
+    "design": "Design",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "devops": "DevOps"
   },
   "services": {
     "title": "Services",
