@@ -23,8 +23,8 @@ export default {
       backgroundImage: {
         darkThemeDarkToLight: "linear-gradient(to top, #232323, #030303)",
         darkThemeLightToDark: "linear-gradient(to top, #030303, #232323)",
-        lightThemeDarkToLight: "linear-gradient(to top, #EDEDED, #BDBDBD)",
-        lightThemeLightToDark: "linear-gradient(to top, #BDBDBD, #EDEDED)",
+        lightThemeDarkToLight: "linear-gradient(to top, #EDEDED, #D4D4D4)",
+        lightThemeLightToDark: "linear-gradient(to top, #D4D4D4, #EDEDED)",
       },
       padding: {
         sectionTop: "50px",
