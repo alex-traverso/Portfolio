@@ -22,7 +22,7 @@ export default function Titles({ children }) {
       <h2 className="text-lightBlue font-madeOuterRegular z-10 lg:text-4xl md:text-3xl smm:text-3xl mm:text-2xl font-bold absolute center">
         {children}
       </h2>
-      <h2 className="text-lightestGrey font-madeOuterRegular dark:text-lightGrey opacity-20 lg:text-6xl md:text-5xl smm:text-5xl mm:text-4xl font-medium absolute center">
+      <h2 className="text-lightestGrey font-madeOuterRegular dark:text-lightGrey opacity-10 dark:opacity-20 lg:text-6xl md:text-5xl smm:text-5xl mm:text-4xl font-medium absolute center">
         {children}
       </h2>
     </motion.div>
