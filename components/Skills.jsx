@@ -18,8 +18,7 @@ export default function Skills({ skills = [] }) {
   const disciplines = ["frontend", "backend", "devops"];
 
   const renderCard = (skill) => {
-    const src =
-      theme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
+    const src = theme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
     return (
       <SkillsCard
         key={skill.name}
@@ -74,9 +73,9 @@ export default function Skills({ skills = [] }) {
                 return (
                   <div
                     key={discipline}
-                    className="flex flex-col items-center gap-6 w-full"
+                    className="flex flex-col items-center gap-6 w-full rounded-3xl px-6 py-8 sm:px-8 border border-lightGrey dark:border-zinc-700/40 bg-lightestBg/40 dark:bg-lightestGrey/10"
                   >
-                    <h3 className="font-madeOuterRegular font-medium uppercase tracking-wide text-lightBlue mm:text-lg xs:text-xl">
+                    <h3 className="font-madeOuterRegular font-medium uppercase tracking-wide text-dark dark:text-white mm:text-lg xs:text-2xl">
                       {t(discipline)}
                     </h3>
                     <div className="flex flex-wrap justify-center items-center gap-6">
@@ -87,8 +86,10 @@ export default function Skills({ skills = [] }) {
               })
             : null}
           {category === "Design" ? (
-            <div className="flex flex-wrap justify-center items-center gap-6">
-              {designSkills.map(renderCard)}
+            <div className="w-full rounded-3xl px-6 py-8 sm:px-8 border border-lightGrey dark:border-zinc-700/40 bg-lightestBg/40 dark:bg-lightestGrey/10">
+              <div className="flex flex-wrap justify-center items-center gap-6">
+                {designSkills.map(renderCard)}
+              </div>
             </div>
           ) : null}
         </div>
