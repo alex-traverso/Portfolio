@@ -6,91 +6,14 @@ import SkillsCard from "./SkillsCard";
 import { MotionScrollTransition } from "./MotionScrollTransition";
 import { useTranslations } from "next-intl";
 
-export default function Skills() {
+export default function Skills({ skills = [] }) {
   const [category, setCategory] = useState("Development");
   const { theme, setTheme } = useTheme();
 
   const t = useTranslations("skills");
 
-  const baseUrl = `https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/`;
-
-  const developmentSkills = [
-    {
-      src: `${baseUrl}development-icons/html.svg`,
-      title: "HTML5",
-      alt: "HTML5",
-    },
-    {
-      src: `${baseUrl}development-icons/css.svg`,
-      alt: "CSS",
-      title: "CSS",
-    },
-    {
-      src: `${baseUrl}development-icons/javascript.svg`,
-      alt: "Javascript",
-      title: "Javascript",
-    },
-    {
-      src: `${baseUrl}development-icons/react-js.svg`,
-      alt: "React Js",
-      title: "React Js",
-    },
-    {
-      src: {
-        lightThemeSrc: `${baseUrl}development-icons/next-light.svg`,
-        darkThemeSrc: `${baseUrl}development-icons/next-dark.svg`,
-      },
-      alt: "Next Js",
-      title: "Next Js",
-    },
-    {
-      src: `${baseUrl}development-icons/mongodb.svg`,
-      alt: "MongoDB",
-      title: "MongoDB",
-    },
-
-    {
-      src: `${baseUrl}development-icons/firebase.svg`,
-      alt: "Firebase",
-      title: "Firebase",
-    },
-
-    { src: `${baseUrl}development-icons/git.svg`, alt: "Git", title: "Git" },
-
-    {
-      src: `${baseUrl}development-icons/bootstrap.svg`,
-      alt: "Bootstrap",
-      title: "Bootstrap",
-    },
-    {
-      src: `${baseUrl}development-icons/tailwind.svg`,
-      alt: "Talwind CSS",
-      title: "Talwind CSS",
-    },
-  ];
-
-  const designSkills = [
-    {
-      src: `${baseUrl}design-icons/illustrator.svg`,
-      alt: "Adobe Illustrator",
-      title: "Adobe Illustrator",
-    },
-    {
-      src: `${baseUrl}design-icons/photoshop.svg`,
-      alt: "Adobe Photoshop",
-      title: "Adobe Photoshop",
-    },
-    {
-      src: `${baseUrl}design-icons/premiere.svg`,
-      alt: "Adobe Premiere",
-      title: "Adobe Premiere",
-    },
-    {
-      src: `${baseUrl}design-icons/figma.svg`,
-      alt: "Figma",
-      title: "Figma",
-    },
-  ];
+  const developmentSkills = skills.filter((s) => s.category === "development");
+  const designSkills = skills.filter((s) => s.category === "design");
 
   return (
     <>
@@ -131,17 +54,15 @@ export default function Skills() {
             <>
               {developmentSkills.map((skill) => {
                 const src =
-                  typeof skill.src === "object"
-                    ? theme === "light"
-                      ? skill.src.lightThemeSrc
-                      : skill.src.darkThemeSrc
+                  theme === "dark" && skill.src_dark
+                    ? skill.src_dark
                     : skill.src;
                 return (
                   <SkillsCard
-                    key={skill.title}
-                    title={skill.title}
+                    key={skill.name}
+                    title={skill.name}
                     src={src}
-                    alt={skill.alt}
+                    alt={skill.name}
                   />
                 );
               })}
@@ -149,14 +70,20 @@ export default function Skills() {
           ) : null}
           {category === "Design" ? (
             <>
-              {designSkills.map((skill) => (
-                <SkillsCard
-                  key={skill.title}
-                  title={skill.title}
-                  src={skill.src}
-                  alt={skill.alt}
-                />
-              ))}
+              {designSkills.map((skill) => {
+                const src =
+                  theme === "dark" && skill.src_dark
+                    ? skill.src_dark
+                    : skill.src;
+                return (
+                  <SkillsCard
+                    key={skill.name}
+                    title={skill.name}
+                    src={src}
+                    alt={skill.name}
+                  />
+                );
+              })}
             </>
           ) : null}
         </div>
