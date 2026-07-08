@@ -15,6 +15,21 @@ export default function Skills({ skills = [] }) {
   const developmentSkills = skills.filter((s) => s.category === "development");
   const designSkills = skills.filter((s) => s.category === "design");
 
+  const disciplines = ["frontend", "backend", "devops"];
+
+  const renderCard = (skill) => {
+    const src =
+      theme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
+    return (
+      <SkillsCard
+        key={skill.name}
+        title={skill.name}
+        src={src}
+        alt={skill.name}
+      />
+    );
+  };
+
   return (
     <>
       <section
@@ -49,42 +64,32 @@ export default function Skills({ skills = [] }) {
           </button>
         </MotionScrollTransition>
 
-        <div className="flex flex-wrap justify-center items-center gap-6 w-[70vw]">
-          {category === "Development" ? (
-            <>
-              {developmentSkills.map((skill) => {
-                const src =
-                  theme === "dark" && skill.src_dark
-                    ? skill.src_dark
-                    : skill.src;
-                return (
-                  <SkillsCard
-                    key={skill.name}
-                    title={skill.name}
-                    src={src}
-                    alt={skill.name}
-                  />
+        <div className="flex flex-col items-center gap-12 w-[70vw]">
+          {category === "Development"
+            ? disciplines.map((discipline) => {
+                const items = developmentSkills.filter(
+                  (s) => s.discipline === discipline,
                 );
-              })}
-            </>
-          ) : null}
+                if (items.length === 0) return null;
+                return (
+                  <div
+                    key={discipline}
+                    className="flex flex-col items-center gap-6 w-full"
+                  >
+                    <h3 className="font-madeOuterRegular font-medium uppercase tracking-wide text-lightBlue mm:text-lg xs:text-xl">
+                      {t(discipline)}
+                    </h3>
+                    <div className="flex flex-wrap justify-center items-center gap-6">
+                      {items.map(renderCard)}
+                    </div>
+                  </div>
+                );
+              })
+            : null}
           {category === "Design" ? (
-            <>
-              {designSkills.map((skill) => {
-                const src =
-                  theme === "dark" && skill.src_dark
-                    ? skill.src_dark
-                    : skill.src;
-                return (
-                  <SkillsCard
-                    key={skill.name}
-                    title={skill.name}
-                    src={src}
-                    alt={skill.name}
-                  />
-                );
-              })}
-            </>
+            <div className="flex flex-wrap justify-center items-center gap-6">
+              {designSkills.map(renderCard)}
+            </div>
           ) : null}
         </div>
       </section>
