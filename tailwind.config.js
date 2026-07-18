@@ -19,6 +19,18 @@ export default {
         lightestGrey: "#232323",
         dark: "#030303",
         lightBlue: "#4399CE",
+        surface: "var(--bg-surface)",
+        surfaceAlt: "var(--bg-surface-alt)",
+        textPrimary: "var(--text-primary)",
+        textSecondary: "var(--text-secondary)",
+        textTertiary: "var(--text-tertiary)",
+        borderSubtle: "var(--border-subtle)",
+        accent: "var(--accent)",
+      },
+      backgroundColor: {
+        // "base" is scoped to background-only (not `colors`) so it can't collide
+        // with Tailwind's built-in `text-base` font-size utility.
+        base: "var(--bg-base)",
       },
       backgroundImage: {
         darkThemeDarkToLight: "linear-gradient(to top, #232323, #030303)",

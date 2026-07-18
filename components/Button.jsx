@@ -1,18 +1,38 @@
 import Link from "next/link";
 
-export default function Button({ children, onClick, disabled, href, target }) {
-  return (
-    <>
+const buttonClassName =
+  "cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-textPrimary border-2 border-accent rounded-full hover:bg-accent transition-all tracking-wide flex items-center text-center";
+
+export default function Button({
+  children,
+  onClick,
+  disabled,
+  href,
+  target,
+  type = "button",
+}) {
+  if (href) {
+    return (
       <Link
-        href={`${href}`}
+        href={href}
         target={target}
         rel="noreferrer"
-        className="cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-black dark:text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-wide flex items-center text-center"
+        className={buttonClassName}
         onClick={onClick}
-        disabled={disabled}
       >
         {children}
       </Link>
-    </>
+    );
+  }
+
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={buttonClassName}
+    >
+      {children}
+    </button>
   );
 }

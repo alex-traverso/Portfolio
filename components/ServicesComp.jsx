@@ -11,7 +11,7 @@ export default function Services() {
     <>
       <div
         id="services"
-        className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeDarkToLight dark:bg-darkThemeDarkToLight flex flex-col justify-center items-center"
+        className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-base flex flex-col justify-center items-center"
       >
         <div>
           <Titles>{t("title").toUpperCase()}</Titles>

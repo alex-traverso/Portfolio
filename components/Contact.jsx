@@ -53,7 +53,7 @@ export default function Contact() {
     <div
       id="contact"
       onSubmit={openModal}
-      className="flex flex-col justify-center items-center w-full bg-lightThemeDarkToLight dark:bg-darkThemeDarkToLight pb-sectionBottom pt-sectionTop"
+      className="flex flex-col justify-center items-center w-full bg-base pb-sectionBottom pt-sectionTop"
     >
       <Titles>{t("title").toUpperCase()}</Titles>
 
@@ -64,7 +64,7 @@ export default function Contact() {
         >
           <div
             ref={modalRef}
-            className="bg-dark duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] flex-col justify-center items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all dark:shadow-zinc-700/40"
+            className="bg-surface duration-400 text-textPrimary relative flex md:min-h-[350px] w-[500px] flex-col justify-center items-center gap-4 rounded-xl border border-borderSubtle p-6 shadow-inner transition-all dark:shadow-zinc-700/40"
           >
             <h2 className="text-2xl">{t("successMessage")}</h2>
             <Check width={70} height={70} stroke="#4399CE" />
@@ -78,11 +78,11 @@ export default function Contact() {
         style={{ y: scaleProgress, opacity: scrollYProgress }}
         onSubmit={handleSubmit}
         type="submit"
-        className="flex flex-col justify-center items-start lg:w-[45%] smm:w-[60%] mm:w-[80%] gap-3 text-black dark:text-white"
+        className="flex flex-col justify-center items-start lg:w-[45%] smm:w-[60%] mm:w-[80%] gap-3 text-textPrimary"
       >
         <input
           required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
+          className="bg-surface lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
           type="text"
           value={name}
           name="name"
@@ -98,7 +98,7 @@ export default function Contact() {
 
         <input
           required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
+          className="bg-surface lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
           type="text"
           value={email}
           name="email"
@@ -114,7 +114,7 @@ export default function Contact() {
 
         <textarea
           required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full resize-none h-36 rounded-xl"
+          className="bg-surface lg:p-3 mm:px-3 mm:py-2 w-full resize-none h-36 rounded-xl"
           value={message}
           name="message"
           placeholder={t("message")}

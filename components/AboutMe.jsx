@@ -13,7 +13,7 @@ export default function AboutMe() {
     <>
       <div
         id="aboutMe"
-        className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeDarkToLight dark:bg-darkThemeDarkToLight md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col mm:flex mm:justify-end mm:flex-col"
+        className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-base md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col mm:flex mm:justify-end mm:flex-col"
       >
         <Titles>{t("title").toUpperCase()}</Titles>
         <div className="flex lg:flex-row lg:items-start gap-16 transition-all mm:flex-col mm:justify-center mm:items-center mm:w-full">
@@ -24,8 +24,8 @@ export default function AboutMe() {
               alt="Logo"
             />
           </MotionScrollTransition>
-          <div className="text-black dark:text-white xl:w-[500px] md:w-[400px] xs:w-[350px] mm:w-[280px] m:w-[300px]">
-            <h2 className="font-madeOuterRegular lg:text-left mb-2 mm:text-center mm:text-3xl">
+          <div className="text-textSecondary xl:w-[500px] md:w-[400px] xs:w-[350px] mm:w-[280px] m:w-[300px]">
+            <h2 className="text-textPrimary font-madeOuterRegular lg:text-left mb-2 mm:text-center mm:text-3xl">
               Alex Traverso
             </h2>
 

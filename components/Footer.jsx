@@ -15,23 +15,23 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
-        className="lg:px-sectionSides mm:px-sectionSidesMobile bg-lightDarkBg dark:bg-dark py-6 flex flex-col items-center gap-3"
+        className="lg:px-sectionSides mm:px-sectionSidesMobile bg-surfaceAlt py-6 flex flex-col items-center gap-3"
       >
         <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link
             href={`/${locale}/privacy-policy`}
-            className="text-black dark:text-zinc-300 hover:text-lightBlue dark:hover:text-lightBlue transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
+            className="text-textSecondary hover:text-accent transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
           >
             {t("privacyLink")}
           </Link>
           <Link
             href={`/${locale}/terms-of-service`}
-            className="text-black dark:text-zinc-300 hover:text-lightBlue dark:hover:text-lightBlue transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
+            className="text-textSecondary hover:text-accent transition-colors mm:text-[0.8rem] m:text-[0.9rem]"
           >
             {t("termsLink")}
           </Link>
         </nav>
-        <p className="text-black dark:text-zinc-300 text-center mm:text-[0.8rem] m:text-[0.9rem]">
+        <p className="text-textSecondary text-center mm:text-[0.8rem] m:text-[0.9rem]">
           ©{today.getFullYear()} Alex Traverso. All rights reserved.
         </p>
       </motion.footer>
