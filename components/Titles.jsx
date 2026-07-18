@@ -17,12 +17,12 @@ export default function Titles({ children }) {
     <motion.div
       ref={ref}
       style={{ y, opacity }}
-      className="relative h-16 w-full flex justify-center items-center mb-7"
+      className="relative h-16 w-full flex justify-center items-center mb-8"
     >
-      <h2 className="text-accent font-madeOuterRegular z-10 lg:text-4xl md:text-3xl smm:text-3xl mm:text-2xl font-bold absolute center">
+      <h2 className="text-accent font-madeOuterBold z-10 text-4xl md:text-5xl font-bold leading-tight absolute center">
         {children}
       </h2>
-      <h2 className="text-textTertiary font-madeOuterRegular opacity-10 dark:opacity-20 lg:text-6xl md:text-5xl smm:text-5xl mm:text-4xl font-medium absolute center">
+      <h2 className="text-textTertiary font-madeOuterBold opacity-10 dark:opacity-20 text-5xl md:text-7xl font-medium absolute center">
         {children}
       </h2>
     </motion.div>

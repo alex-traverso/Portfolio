@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const buttonClassName =
-  "cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-textPrimary border-2 border-accent rounded-full hover:bg-accent transition-all tracking-wide flex items-center text-center";
+  "cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-textPrimary border-2 border-accent rounded-md hover:bg-accent transition-all tracking-wide flex items-center text-center";
 
 export default function Button({
   children,

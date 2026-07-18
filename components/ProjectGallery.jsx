@@ -8,9 +8,9 @@ export default function ProjectGallery({ projects }) {
   const t = useTranslations("projects");
 
   return (
-    <div className="flex flex-col items-center justify-center w-max">
-      <div className="flex justify-center mt-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4">
+    <div className="flex flex-col items-center justify-center w-full">
+      <div className="flex justify-center mt-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 w-full">
           {projects.map((project) => (
             <Project
               key={project.title}

@@ -8,10 +8,12 @@ export default function Projects({ projects }) {
   return (
     <div
       id="projects"
-      className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeLightToDark dark:bg-darkThemeLightToDark flex flex-col justify-center items-center"
+      className="w-full bg-lightThemeLightToDark dark:bg-darkThemeLightToDark py-16 md:py-24"
     >
-      <Titles>{t("title").toUpperCase()}</Titles>
-      <ProjectGallery projects={projects} />
+      <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
+        <Titles>{t("title").toUpperCase()}</Titles>
+        <ProjectGallery projects={projects} />
+      </div>
     </div>
   );
 }

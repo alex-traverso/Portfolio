@@ -29,17 +29,34 @@ export default function Banner() {
             />
           </h3>
 
-          <Link
-            activeClass="active"
-            className="cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-white border-2 border-lightBlue rounded-full hover:bg-lightBlue transition-all tracking-widest flex items-center text-center"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-80}
-            duration={500}
-          >
-            {t("contact")}
-          </Link>
+          <p className="text-white max-w-md mb-6 text-base leading-relaxed lg:text-left mm:text-center mm:px-4 lg:px-0">
+            {t("description")}
+          </p>
+
+          <div className="flex flex-wrap gap-4 mm:justify-center lg:justify-start mm:w-full lg:w-auto">
+            <Link
+              activeClass="active"
+              className="cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-white bg-accent rounded-md hover:opacity-90 transition-all tracking-widest flex items-center text-center"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+            >
+              {t("viewProjects")}
+            </Link>
+            <Link
+              activeClass="active"
+              className="cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-white border-2 border-accent rounded-md hover:bg-accent transition-all tracking-widest flex items-center text-center"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+            >
+              {t("contact")}
+            </Link>
+          </div>
         </div>
 
         <div className="absolute top-0 left-0 h-screen w-screen">
