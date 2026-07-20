@@ -42,7 +42,9 @@
   },
   "projects": {
     "title": "Proyectos",
-    "seeMore": "Ver más"
+    "seeMore": "Ver más",
+    "repository": "Repositorio",
+    "viewSite": "Ver sitio"
   },
   "contact": {
     "title": "Contacto",

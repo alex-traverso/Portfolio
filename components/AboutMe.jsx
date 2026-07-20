@@ -34,6 +34,8 @@ export default function AboutMe() {
               </MotionScrollTransition>
               <MotionScrollTransition className=" lg:block mm:flex mm:justify-center">
                 <Button
+                  variant="secondary"
+                  size="md"
                   href="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/CV%20-%20Alex%20Traverso.pdf"
                   target="_blank"
                   rel="noreferrer"

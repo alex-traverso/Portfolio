@@ -1,23 +1,48 @@
 import Link from "next/link";
 
-const buttonClassName =
-  "cursor-pointer w-max lg:text-base lg:font-medium lg:px-5 lg:py-2 smm:px-5 smm:py-2 mm:px-4 mm:py-1 mm:text-sm text-textPrimary border-2 border-accent rounded-md hover:bg-accent transition-all tracking-wide flex items-center text-center";
+const BASE_CLASSNAME =
+  "inline-flex items-center justify-center rounded-md transition-colors cursor-pointer focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50 disabled:cursor-not-allowed";
+
+const VARIANT_CLASSNAMES = {
+  primary: "bg-accent text-white hover:opacity-90",
+  secondary:
+    "border border-[var(--text-tertiary-40)] text-textSecondary bg-transparent hover:border-accent hover:text-accent",
+};
+
+const SIZE_CLASSNAMES = {
+  lg: "text-base px-6 py-3",
+  md: "text-sm px-5 py-2.5",
+  sm: "text-sm px-4 py-2",
+};
+
+export const buttonClassName = (
+  variant = "secondary",
+  size = "sm",
+  className = "",
+) =>
+  `${BASE_CLASSNAME} ${SIZE_CLASSNAMES[size]} ${VARIANT_CLASSNAMES[variant]} ${className}`.trim();
 
 export default function Button({
   children,
+  variant = "secondary",
+  size = "sm",
   onClick,
   disabled,
   href,
   target,
+  rel,
   type = "button",
+  className = "",
 }) {
+  const classes = buttonClassName(variant, size, className);
+
   if (href) {
     return (
       <Link
         href={href}
         target={target}
-        rel="noreferrer"
-        className={buttonClassName}
+        rel={rel}
+        className={classes}
         onClick={onClick}
       >
         {children}
@@ -30,7 +55,7 @@ export default function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={buttonClassName}
+      className={classes}
     >
       {children}
     </button>

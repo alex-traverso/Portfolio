@@ -71,7 +71,9 @@ export default function Contact() {
                 {t("successMessage")}
               </h2>
               <Check width={70} height={70} stroke="#4399CE" />
-              <Button onClick={() => setModal(false)}>{t("close")}</Button>
+              <Button variant="secondary" onClick={() => setModal(false)}>
+                {t("close")}
+              </Button>
             </div>
           </section>
         )}
@@ -131,6 +133,8 @@ export default function Contact() {
           )}
 
           <Button
+            variant="primary"
+            size="md"
             disabled={isButtonDisabled}
             onClick={handleSubmit}
             type="submit"
