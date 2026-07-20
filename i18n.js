@@ -11,6 +11,6 @@ export default getRequestConfig(async ({ locale }) => {
       locale,
       e,
     );
-    return { messages: {} };
+    return { messages: {}, timeZone: "America/Argentina/Buenos_Aires" };
   }
 });

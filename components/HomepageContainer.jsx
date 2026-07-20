@@ -1,7 +1,7 @@
 "use client";
 import Banner from "@/components/Banner";
 import Skills from "@/components/Skills";
-import Services from "@/components/ServicesComp";
+import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";

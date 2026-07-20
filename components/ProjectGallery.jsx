@@ -10,7 +10,7 @@ export default function ProjectGallery({ projects }) {
   return (
     <div className="flex flex-col items-center justify-center w-full">
       <div className="flex justify-center mt-4 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-6 w-full">
           {projects.map((project) => (
             <Project
               key={project.title}
@@ -25,7 +25,7 @@ export default function ProjectGallery({ projects }) {
           ))}
         </div>
       </div>
-      <MotionScrollTransition className="w-full flex justify-start max-w-screen-xl mt-4">
+      <MotionScrollTransition className="w-full flex justify-start mt-4">
         <Link
           href="https://github.com/alex-traverso"
           target="_blank"

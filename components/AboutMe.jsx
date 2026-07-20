@@ -23,7 +23,7 @@ export default function AboutMe() {
               />
             </MotionScrollTransition>
             <div className="text-textSecondary xl:w-[500px] md:w-[400px] xs:w-[350px] mm:w-[280px] m:w-[300px]">
-              <h2 className="text-textPrimary text-xl md:text-2xl font-semibold text-left mb-2">
+              <h2 className="text-textPrimary text-2xl lg:text-3xl font-semibold text-center lg:text-left mb-2">
                 Alex Traverso
               </h2>
 
