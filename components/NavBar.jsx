@@ -51,8 +51,8 @@ const NavBar = () => {
                 className="mr-1 pt-2"
                 src="/logo.png"
                 alt="Logo"
-                height={45}
-                width={45}
+                height={40}
+                width={40}
               />
             </Link>
           </div>

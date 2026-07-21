@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 import { useTranslations } from "next-intl";
 import { buttonClassName } from "./Button";
+import AnimatedShaderBackground from "./AnimatedShaderBackground";
 
 export default function Banner() {
   const t = useTranslations("banner");
@@ -9,6 +10,7 @@ export default function Banner() {
   return (
     <>
       <div className="dark relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden">
+        <AnimatedShaderBackground className="absolute inset-0 z-0" />
         <div className="absolute z-10 flex flex-col gap-6 justify-center items-start bg-black lg:px-sectionSides mm:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]">
           <div>
             <h1
@@ -58,21 +60,6 @@ export default function Banner() {
               {t("contact")}
             </Link>
           </div>
-        </div>
-
-        <div className="absolute top-0 left-0 h-screen w-screen">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover"
-          >
-            <source
-              src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/video-banner.mp4"
-              type="video/mp4"
-            />
-          </video>
         </div>
       </div>
     </>
