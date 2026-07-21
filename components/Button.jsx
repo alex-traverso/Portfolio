@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const BASE_CLASSNAME =
-  "inline-flex items-center justify-center rounded-md transition-colors cursor-pointer focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50 disabled:cursor-not-allowed";
+  "min-w-[120px] inline-flex items-center justify-center rounded-md transition-colors cursor-pointer focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:opacity-50 disabled:cursor-not-allowed";
 
 const VARIANT_CLASSNAMES = {
   primary: "bg-accent text-white hover:opacity-90",
   secondary:
-    "border border-[var(--text-tertiary-40)] text-textSecondary bg-transparent hover:border-accent hover:text-accent",
+    "border border-[var(--text-tertiary-40)] text-textSecondary bg-transparent hover:border-accent hover:bg-accent hover:text-white",
 };
 
 const SIZE_CLASSNAMES = {
