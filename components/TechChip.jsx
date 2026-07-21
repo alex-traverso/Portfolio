@@ -27,15 +27,26 @@ export default function TechChip({ skill, size = "md" }) {
     setMounted(true);
   }, []);
 
-  const currentTheme = mounted ? (theme === "system" ? systemTheme : theme) : "light";
-  const iconSrc = currentTheme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
+  const currentTheme = mounted
+    ? theme === "system"
+      ? systemTheme
+      : theme
+    : "light";
+  const iconSrc =
+    currentTheme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
   const iconSize = ICON_SIZES[size];
 
   return (
     <span
-      className={`flex gap-x-2 justify-between items-center ${SIZE_CLASSNAMES[size]} rounded-full border border-borderSubtle bg-transparent text-textSecondary hover:border-accent hover:text-accent transition-colors cursor-default`}
+      className={`group flex gap-x-2 justify-between items-center ${SIZE_CLASSNAMES[size]} rounded-full border border-borderSubtle bg-transparent text-textSecondary hover:border-accent hover:text-accent transition-colors cursor-default`}
     >
-      <Image src={iconSrc} alt={skill.name} height={iconSize} width={iconSize} />
+      <Image
+        src={iconSrc}
+        alt={skill.name}
+        height={iconSize}
+        width={iconSize}
+        className="transition-all duration-200"
+      />
       {displayTechName(skill.name)}
     </span>
   );
