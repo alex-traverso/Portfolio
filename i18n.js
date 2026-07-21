@@ -4,6 +4,7 @@ export default getRequestConfig(async ({ locale }) => {
   try {
     return {
       messages: (await import(`./messages/${locale}.json`)).default,
+      timeZone: "America/Argentina/Buenos_Aires",
     };
   } catch (e) {
     console.error(
