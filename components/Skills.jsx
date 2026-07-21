@@ -2,6 +2,7 @@
 import Titles from "./Titles";
 import { useState } from "react";
 import { MotionScrollTransition } from "./MotionScrollTransition";
+import { StaggerContainer, StaggerItem } from "./MotionStagger";
 import { useTranslations } from "next-intl";
 import TechChip from "./TechChip";
 
@@ -18,11 +19,13 @@ export default function Skills({ skills = [] }) {
   const disciplines = ["frontend", "backend", "devops"];
 
   const renderChips = (items) => (
-    <div className="flex flex-wrap gap-2">
+    <StaggerContainer className="flex flex-wrap gap-2">
       {items.map((skill) => (
-        <TechChip key={skill.name} skill={skill} />
+        <StaggerItem key={skill.name} as="span">
+          <TechChip skill={skill} />
+        </StaggerItem>
       ))}
-    </div>
+    </StaggerContainer>
   );
 
   return (

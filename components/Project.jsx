@@ -1,6 +1,6 @@
 import TechChip from "./TechChip";
 import Button from "./Button";
-import { MotionScrollTransition } from "./MotionScrollTransition";
+import { StaggerItem } from "./MotionStagger";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ export default function Project({
   const t = useTranslations("projects");
 
   return (
-    <MotionScrollTransition className="h-full">
+    <StaggerItem className="h-full">
       <div className="bg-surface rounded-xl border border-borderSubtle overflow-hidden hover:border-[var(--accent-40)] transition-colors h-full flex flex-col">
         <div className="relative w-full aspect-[16/10]">
           <Image src={src} alt={alt} fill className="object-cover" />
@@ -59,6 +59,6 @@ export default function Project({
           </div>
         </div>
       </div>
-    </MotionScrollTransition>
+    </StaggerItem>
   );
 }

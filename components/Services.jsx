@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import ServicesCard from "./ServicesCard";
 import Titles from "./Titles";
+import { StaggerContainer } from "./MotionStagger";
 
 export default function Services() {
   const t = useTranslations("services");
@@ -15,7 +16,7 @@ export default function Services() {
             <Titles>{t("title").toUpperCase()}</Titles>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
             <ServicesCard
               src={`${baseUrl}development-icon.svg`}
               alt={t("webAppsAlt")}
@@ -34,7 +35,7 @@ export default function Services() {
               title={t("automationTitle")}
               description={t("automationDescription")}
             />
-          </div>
+          </StaggerContainer>
         </div>
       </div>
     </>
