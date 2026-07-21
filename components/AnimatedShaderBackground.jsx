@@ -9,15 +9,25 @@ import { useEffect, useRef } from "react";
  * CSS blur so it reads as a smooth, irregular mesh gradient rather than
  * distinct noise cells.
  *
- * Palette: #030303 (base, dominant) -> #1E4A63 (mid) -> #4399CE (accent).
+ * Ambient palette (on-brand blue/teal): #030303 (base, dominant) -> #2C6D91
+ * (mid) -> #4399CE (accent).
+ *
+ * Cursor interaction: the pointer warps the noise field itself (the mesh
+ * swells/curves toward it) and emits a celeste->violeta halo that follows even
+ * when still and intensifies with movement. Those two accent hues live ONLY in
+ * the interaction, never in the ambient field.
  */
 
 const COLOR_A = [0.012, 0.012, 0.012]; // #030303
-const COLOR_B = [0.118, 0.29, 0.388]; // #1E4A63
+const COLOR_B = [0.173, 0.427, 0.569]; // #2C6D91
 const COLOR_C = [0.263, 0.6, 0.808]; // #4399CE
 
+// Interaction-only accents.
+const COLOR_CELESTE = [0.357, 0.831, 1.0]; // #5BD4FF
+const COLOR_VIOLET = [0.357, 0.294, 0.541]; // #5B4B8A
+
 const FALLBACK_GRADIENT =
-  "radial-gradient(120% 120% at 30% 20%, #1E4A63 0%, #030303 55%, #030303 100%)";
+  "radial-gradient(120% 120% at 30% 20%, #2C6D91 0%, #030303 55%, #030303 100%)";
 
 const VERTEX_SHADER = `
   attribute vec2 a_position;
@@ -34,9 +44,11 @@ const FRAGMENT_SHADER = `
   uniform vec3 u_colorA;
   uniform vec3 u_colorB;
   uniform vec3 u_colorC;
+  uniform vec3 u_celeste;
+  uniform vec3 u_violet;
   uniform vec2 u_mouse;
-  uniform vec2 u_mouseDir;
   uniform float u_mouseStr;
+  uniform float u_mouseSpeed;
 
   vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
   vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
@@ -72,9 +84,23 @@ const FRAGMENT_SHADER = `
     vec2 p = uv * 3.0;
     float t = u_time * 0.05;
 
-    float n1 = snoise(p + t);
-    float n2 = snoise(p * 1.5 - t * 0.7);
-    float n3 = snoise(p * 0.7 + t * 1.3);
+    // --- cursor influence (aspect-corrected radial falloff) ---------------
+    const float RADIUS = 0.35;
+    float aspect = u_resolution.x / u_resolution.y;
+    vec2 rel = (uv - u_mouse) * vec2(aspect, 1.0);
+    float d = length(rel);
+    float infl = 1.0 - smoothstep(0.0, RADIUS, d);
+
+    // Domain warp: push the noise field outward + a little swirl so the mesh
+    // itself swells/curves toward the pointer (survives the CSS blur).
+    vec2 push = normalize(rel + 1e-5) * infl * infl;
+    vec2 swirl = vec2(-rel.y, rel.x) * infl;
+    vec2 warp = (push * 0.25 + swirl * 0.15) * u_mouseStr * (0.5 + u_mouseSpeed);
+    vec2 pW = p + warp;
+
+    float n1 = snoise(pW + t);
+    float n2 = snoise(pW * 1.5 - t * 0.7);
+    float n3 = snoise(pW * 0.7 + t * 1.3);
 
     float mixA = smoothstep(-0.6, 0.6, n1 + 0.1);
     float mixB = smoothstep(-0.4, 0.5, n2 * n3);
@@ -82,27 +108,14 @@ const FRAGMENT_SHADER = `
     vec3 color = mix(u_colorA, u_colorB, mixA);
     color = mix(color, u_colorC, mixB * 0.45);
 
+    // Color halo: violeta on the outer ring, celeste in the core, plus an
+    // additive glow so it reads as a light source energizing the fluid.
     if (u_mouseStr > 0.001) {
-      float aspect = u_resolution.x / u_resolution.y;
-      vec2 m = u_mouse * 3.0;
-      vec2 rel = (p - m) * vec2(aspect, 1.0);
-      vec2 rawDir = u_mouseDir;
-      vec2 dir = length(rawDir) > 0.0001
-        ? normalize(rawDir * vec2(aspect, 1.0))
-        : vec2(1.0, 0.0);
-      float along = dot(rel, dir);
-      float behind = -along;
-      vec2 perpAxis = vec2(-dir.y, dir.x);
-      float perp = dot(rel, perpAxis);
-      perp += snoise(p * 2.0 + t * 2.0) * 0.06;
-
-      float behindMask = smoothstep(0.0, 0.05, behind) * (1.0 - smoothstep(0.06, 0.5, behind));
-      float widthMask = 1.0 - smoothstep(0.0, 0.16, abs(perp));
-      float arc = behindMask * widthMask * u_mouseStr;
-
-      vec3 arcCore = mix(u_colorC, vec3(1.0), 0.75);
-      vec3 arcColor = mix(arcCore, u_colorC, smoothstep(0.0, 1.0, behind / 0.5));
-      color = mix(color, arcColor, clamp(arc * 1.8, 0.0, 1.0));
+      float core = 1.0 - smoothstep(0.0, RADIUS * 0.55, d);
+      vec3 halo = mix(u_violet, u_celeste, core);
+      float amt = infl * u_mouseStr * (0.55 + 0.6 * u_mouseSpeed);
+      color = mix(color, halo, clamp(amt, 0.0, 0.85));
+      color += u_celeste * pow(core, 3.0) * u_mouseStr * (0.25 + 0.4 * u_mouseSpeed);
     }
 
     gl_FragColor = vec4(color, 1.0);
@@ -178,9 +191,11 @@ export default function AnimatedShaderBackground({ className = "" }) {
     const uColorA = gl.getUniformLocation(program, "u_colorA");
     const uColorB = gl.getUniformLocation(program, "u_colorB");
     const uColorC = gl.getUniformLocation(program, "u_colorC");
+    const uCeleste = gl.getUniformLocation(program, "u_celeste");
+    const uViolet = gl.getUniformLocation(program, "u_violet");
     const uMouse = gl.getUniformLocation(program, "u_mouse");
-    const uMouseDir = gl.getUniformLocation(program, "u_mouseDir");
     const uMouseStr = gl.getUniformLocation(program, "u_mouseStr");
+    const uMouseSpeed = gl.getUniformLocation(program, "u_mouseSpeed");
 
     // --- state -----------------------------------------------------------
     const reduceMotion = window.matchMedia(
@@ -203,14 +218,13 @@ export default function AnimatedShaderBackground({ className = "" }) {
     window.addEventListener("resize", resize);
     resize();
 
-    // --- cursor arc state --------------------------------------------------
+    // --- cursor state ------------------------------------------------------
     const target = { x: 0.5, y: 0.5 };
     const mouse = { x: 0.5, y: 0.5 };
     const prevMouse = { x: 0.5, y: 0.5 };
-    const dir = { x: 0, y: 0 };
-    let dirTarget = { x: 0, y: 0 };
     let targetStr = 0;
     let mouseStr = 0;
+    let speed = 0;
 
     function onPointerMove(e) {
       const rect = canvas.getBoundingClientRect();
@@ -253,9 +267,11 @@ export default function AnimatedShaderBackground({ className = "" }) {
       gl.uniform3f(uColorA, COLOR_A[0], COLOR_A[1], COLOR_A[2]);
       gl.uniform3f(uColorB, COLOR_B[0], COLOR_B[1], COLOR_B[2]);
       gl.uniform3f(uColorC, COLOR_C[0], COLOR_C[1], COLOR_C[2]);
+      gl.uniform3f(uCeleste, COLOR_CELESTE[0], COLOR_CELESTE[1], COLOR_CELESTE[2]);
+      gl.uniform3f(uViolet, COLOR_VIOLET[0], COLOR_VIOLET[1], COLOR_VIOLET[2]);
       gl.uniform2f(uMouse, mouse.x, mouse.y);
-      gl.uniform2f(uMouseDir, dir.x, dir.y);
       gl.uniform1f(uMouseStr, mouseStr);
+      gl.uniform1f(uMouseSpeed, speed);
       gl.drawArrays(gl.TRIANGLES, 0, 6);
     }
 
@@ -266,12 +282,8 @@ export default function AnimatedShaderBackground({ className = "" }) {
 
       const dx = mouse.x - prevMouse.x;
       const dy = mouse.y - prevMouse.y;
-      if (dx * dx + dy * dy > 0.0000005) {
-        const invLen = 1 / Math.sqrt(dx * dx + dy * dy);
-        dirTarget = { x: dx * invLen, y: dy * invLen };
-      }
-      dir.x += (dirTarget.x - dir.x) * 0.15;
-      dir.y += (dirTarget.y - dir.y) * 0.15;
+      const rawSpeed = Math.min(Math.sqrt(dx * dx + dy * dy) * 40, 1);
+      speed += (rawSpeed - speed) * 0.1;
       prevMouse.x = mouse.x;
       prevMouse.y = mouse.y;
 
