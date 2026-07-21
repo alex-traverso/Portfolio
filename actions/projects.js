@@ -10,7 +10,8 @@ export async function getProjects(locale) {
         techs (*)
       )
     `)
-    .eq("active", true);
+    .eq("active", true)
+    .order("display_order", { ascending: true });
   if (error) {
     console.error(error);
     throw error;
