@@ -14,7 +14,7 @@ export default function SocialMedia() {
           href="mailto:alextraverso6@gmail.com"
         >
           <Email
-            className="hover:scale-[1.05] fill-lightBlue duration-500 shadow-lg"
+            className="hover:scale-[1.05] fill-accent duration-500 shadow-lg"
             width={20}
             height={20}
           />
@@ -25,7 +25,7 @@ export default function SocialMedia() {
           href="https://www.instagram.com/alextraverso/"
         >
           <Instagram
-            className="fill-lightBlue hover:scale-[1.05] duration-500 shadow-lg"
+            className="fill-accent hover:scale-[1.05] duration-500 shadow-lg"
             width={20}
             height={20}
           />
@@ -36,7 +36,7 @@ export default function SocialMedia() {
           href="https://github.com/alex-traverso"
         >
           <Github
-            className="stroke-lightBlue hover:scale-[1.05] duration-500 shadow-md"
+            className="stroke-accent hover:scale-[1.05] duration-500 shadow-md"
             width={20}
             height={20}
           />
@@ -48,12 +48,12 @@ export default function SocialMedia() {
           href="https://www.linkedin.com/in/alex-traverso"
         >
           <Linkedin
-            className="fill-lightBlue hover:scale-[1.05] duration-500 shadow-md"
+            className="fill-accent hover:scale-[1.05] duration-500 shadow-md"
             width={20}
             height={20}
           />
         </Link>
-        <hr className="h-24 w-0.5 border-0 border-lightBlue bg-lightBlue" />
+        <hr className="h-24 w-0.5 border-0 border-accent bg-accent" />
       </div>
     </>
   );

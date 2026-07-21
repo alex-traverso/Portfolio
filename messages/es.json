@@ -9,11 +9,15 @@
   "banner": {
     "fullstackDeveloper": "Desarrollador Full Stack",
     "multimediaDesigner": "Diseñador Multimedia",
+    "description": "Diseño y desarrollo aplicaciones web completas, del sistema al detalle de interfaz.",
+    "viewProjects": "Ver proyectos",
     "contact": "Contacto"
   },
   "aboutMe": {
     "title": "Sobre Mí",
-    "description": "¡Hola! Mi nombre es Alex Traverso y soy Desarrollador Full Stack. Soy apasionado por el mundo del desarrollo la tecnología y el diseño, y disfruto trabajando en equipo. Siempre estoy dispuesto a aprender cosas nuevas para desarrollarme profesionalmente y pertenecer a un equipo en el cual pueda colaborar con mis esfuerzos y adquirir experiencia.",
+    "description1": "¡Hola! Soy Alex, desarrollador full stack. Trabajo en esto desde 2021 y me involucro en el proyecto completo: la arquitectura del sistema, la lógica de backend y la interfaz con la que el usuario finalmente interactúa.",
+    "description2": "Me formé en diseño multimedia, y eso define cómo trabajo. Las decisiones técnicas y las de producto no las pienso por separado.",
+    "description3": "Actualmente me estoy especializando en automatización de procesos: identificar tareas manuales repetitivas y resolverlas con software.",
     "resume": "Descargar CV"
   },
   "skills": {
@@ -26,19 +30,21 @@
   },
   "services": {
     "title": "Servicios",
-    "uxuiTitle": "Diseño UX - UI",
-    "uxuiDescription": "Interfaces optimizadas para una experiencia de usuario excepcional",
-    "uxuiAlt": "Diseño UX - UI",
-    "designTitle": "Diseño web y gráfico",
-    "designDescription": "Diseños modernos y minimalistas que potencian tu marca",
-    "designAlt": "Diseño web y gráfico",
-    "developmentTitle": "Desarrollo de aplicaciones web",
-    "developmentDescription": "Desarrollo de aplicaciones web con tecnologías modernas (JavaScript, React, Next.js)",
-    "developmentAlt": "Desarrollo de aplicaciones web"
+    "webAppsTitle": "Aplicaciones web a medida",
+    "webAppsDescription": "Plataformas completas: autenticación, paneles de administración, integraciones y APIs. Del diseño de la arquitectura a la interfaz final.",
+    "webAppsAlt": "Aplicaciones web a medida",
+    "websitesTitle": "Sitios web y paneles de gestión",
+    "websitesDescription": "Sitios con administrador propio para que gestiones tu contenido sin depender de nadie.",
+    "websitesAlt": "Sitios web y paneles de gestión",
+    "automationTitle": "Automatización de procesos",
+    "automationDescription": "Identificación y resolución de tareas manuales repetitivas dentro de tu operación.",
+    "automationAlt": "Automatización de procesos"
   },
   "projects": {
     "title": "Proyectos",
-    "seeMore": "Ver más"
+    "seeMore": "Ver más",
+    "repository": "Repositorio",
+    "viewSite": "Ver sitio"
   },
   "contact": {
     "title": "Contacto",

@@ -1,22 +1,16 @@
 "use client";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const MotionScrollTransition = ({ children, className }) => {
-  const ref = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.3 1"],
-  });
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const reduce = useReducedMotion();
 
   return (
     <motion.div
       className={className}
-      ref={ref}
-      style={{ y: scaleProgress, opacity: scrollYProgress }}
+      initial={reduce ? false : { opacity: 0, y: 40 }}
+      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {children}
     </motion.div>

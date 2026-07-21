@@ -16,7 +16,7 @@ function renderParagraph(text) {
       {i < parts.length - 1 && (
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="text-lightBlue hover:underline break-words"
+          className="text-accent hover:underline break-words"
         >
           {CONTACT_EMAIL}
         </a>
@@ -30,15 +30,15 @@ export default function LegalPage({ content, locale }) {
   const dateValue = LAST_UPDATED_FORMATTED[locale] ?? LAST_UPDATED_FORMATTED.es;
 
   return (
-    <div className="min-h-screen bg-lightestBg dark:bg-dark text-darkGrey dark:text-lightGrey themeTransition flex flex-col">
+    <div className="min-h-screen bg-base text-textSecondary themeTransition flex flex-col">
       <LegalHeader locale={locale} />
 
       <main className="flex-1 lg:px-sectionSides mm:px-sectionSidesMobile pt-32 pb-sectionBottom">
         <article className="max-w-3xl mx-auto">
-          <h1 className="font-madeOuterRegular text-lightBlue text-3xl md:text-4xl font-bold mb-2">
+          <h1 className="font-madeOuterRegular text-accent text-3xl md:text-4xl font-bold mb-2">
             {content.heading}
           </h1>
-          <p className="text-sm text-lightGrey mb-10">
+          <p className="text-sm text-textTertiary mb-10">
             {dateLabel}: {dateValue}
           </p>
 

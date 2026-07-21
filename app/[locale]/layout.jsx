@@ -6,7 +6,6 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider } from "next-intl";
 import { Roboto, Inter } from "next/font/google";
 import localFont from "next/font/local";
-import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 
 const roboto = Roboto({
@@ -29,13 +28,6 @@ const madeOuterBold = localFont({
   variable: "--font-madeOuterBold",
 });
 
-const NextThemesProvider = dynamic(
-  () => import("next-themes").then((mod) => mod.ThemeProvider),
-  {
-    ssr: false,
-  },
-);
-
 export default function RootLayout({ children }) {
   const { locale } = useParams();
 
@@ -47,15 +39,11 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${inter.className} ${madeOuterRegular.variable} ${madeOuterBold.variable}`}
       >
-        <NextThemesProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
             {children}
           </NextIntlClientProvider>
-        </NextThemesProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,14 +1,15 @@
 "use client";
 import Titles from "./Titles";
 import { useState } from "react";
-import { useTheme } from "next-themes";
-import SkillsCard from "./SkillsCard";
 import { MotionScrollTransition } from "./MotionScrollTransition";
+import { StaggerContainer, StaggerItem } from "./MotionStagger";
 import { useTranslations } from "next-intl";
+import TechChip from "./TechChip";
+
+const HIDDEN_SKILL_NAMES = ["HTML", "CSS"];
 
 export default function Skills({ skills = [] }) {
   const [category, setCategory] = useState("Development");
-  const { theme, setTheme } = useTheme();
 
   const t = useTranslations("skills");
 
@@ -17,81 +18,75 @@ export default function Skills({ skills = [] }) {
 
   const disciplines = ["frontend", "backend", "devops"];
 
-  const renderCard = (skill) => {
-    const src = theme === "dark" && skill.src_dark ? skill.src_dark : skill.src;
-    return (
-      <SkillsCard
-        key={skill.name}
-        title={skill.name}
-        src={src}
-        alt={skill.name}
-      />
-    );
-  };
+  const renderChips = (items) => (
+    <StaggerContainer className="flex flex-wrap gap-2">
+      {items.map((skill) => (
+        <StaggerItem key={skill.name} as="span">
+          <TechChip skill={skill} />
+        </StaggerItem>
+      ))}
+    </StaggerContainer>
+  );
 
   return (
     <>
-      <section
-        id="skills"
-        className="lg:px-sectionSides mm:px-sectionSidesMobile pt-sectionTop pb-sectionBottom bg-lightThemeLightToDark dark:bg-darkThemeLightToDark flex flex-col justify-center items-center"
-      >
-        <Titles>{t("title").toUpperCase()}</Titles>
-        <MotionScrollTransition className="flex gap-6 font-madeOuterRegular font-medium mm:text-xl m:text-[22px] xs:text-2xl text-dark dark:text-white cursor-pointer mb-8">
-          <button
-            onClick={() => {
-              setCategory("Development");
-            }}
-            className={`transition-all ${
-              category === "Development"
-                ? "text-lightBlue underline underline-offset-8"
-                : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
-            }`}
-          >
-            {t("development")}
-          </button>
-          <button
-            onClick={() => {
-              setCategory("Design");
-            }}
-            className={
-              category === "Design"
-                ? "text-lightBlue underline underline-offset-8"
-                : "hover:text-lightBlue transition-all hover:underline hover:underline-offset-8"
-            }
-          >
-            {t("design")}
-          </button>
-        </MotionScrollTransition>
+      <section id="skills" className="w-full bg-base py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
+          <Titles>{t("title").toUpperCase()}</Titles>
+          <MotionScrollTransition className="flex gap-6 text-xl md:text-2xl font-semibold text-textPrimary cursor-pointer mb-8">
+            <button
+              onClick={() => {
+                setCategory("Development");
+              }}
+              className={`transition-all ${
+                category === "Development"
+                  ? "text-accent underline underline-offset-8"
+                  : "hover:text-accent transition-all hover:underline hover:underline-offset-8"
+              }`}
+            >
+              {t("development")}
+            </button>
+            <button
+              onClick={() => {
+                setCategory("Design");
+              }}
+              className={
+                category === "Design"
+                  ? "text-accent underline underline-offset-8"
+                  : "hover:text-accent transition-all hover:underline hover:underline-offset-8"
+              }
+            >
+              {t("design")}
+            </button>
+          </MotionScrollTransition>
 
-        <div className="flex flex-col items-center gap-12 w-[70vw]">
-          {category === "Development"
-            ? disciplines.map((discipline) => {
-                const items = developmentSkills.filter(
-                  (s) => s.discipline === discipline,
-                );
-                if (items.length === 0) return null;
-                return (
-                  <div
-                    key={discipline}
-                    className="flex flex-col items-center gap-6 w-full rounded-3xl px-6 py-8 sm:px-8 border border-lightGrey dark:border-zinc-700/40 bg-lightestBg/40 dark:bg-lightestGrey/10"
-                  >
-                    <h3 className="font-madeOuterRegular font-medium uppercase tracking-wide text-dark dark:text-white mm:text-lg xs:text-2xl">
-                      {t(discipline)}
-                    </h3>
-                    <div className="flex flex-wrap justify-center items-center gap-6">
-                      {items.map(renderCard)}
+          <div className="w-full">
+            {category === "Development" ? (
+              <div className="flex flex-col gap-8 w-full">
+                {disciplines.map((discipline) => {
+                  const items = developmentSkills.filter(
+                    (s) =>
+                      s.discipline === discipline &&
+                      !HIDDEN_SKILL_NAMES.includes(s.name),
+                  );
+
+                  if (items.length === 0) return null;
+                  return (
+                    <div
+                      key={discipline}
+                      className="flex flex-col justify-between w-full gap-3"
+                    >
+                      <h3 className="text-xs tracking-widest uppercase font-medium text-textTertiary">
+                        {t(discipline)}
+                      </h3>
+                      {renderChips(items)}
                     </div>
-                  </div>
-                );
-              })
-            : null}
-          {category === "Design" ? (
-            <div className="w-full rounded-3xl px-6 py-8 sm:px-8 border border-lightGrey dark:border-zinc-700/40 bg-lightestBg/40 dark:bg-lightestGrey/10">
-              <div className="flex flex-wrap justify-center items-center gap-6">
-                {designSkills.map(renderCard)}
+                  );
+                })}
               </div>
-            </div>
-          ) : null}
+            ) : null}
+            {category === "Design" ? renderChips(designSkills) : null}
+          </div>
         </div>
       </section>
     </>

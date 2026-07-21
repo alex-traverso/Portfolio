@@ -15,7 +15,7 @@ const MenuIcons = ({ open, toggle }) => {
         animate={{ opacity: open ? 0 : 1 }}
       >
         <Menu
-          className="stroke-black dark:stroke-white"
+          className="stroke-textPrimary"
           width={30}
           height={30}
         />
@@ -26,7 +26,7 @@ const MenuIcons = ({ open, toggle }) => {
         animate={{ opacity: open ? 1 : 0 }}
       >
         <Close
-          className="stroke-black dark:stroke-white"
+          className="stroke-textPrimary"
           width={30}
           height={30}
           strokeWidth={2}

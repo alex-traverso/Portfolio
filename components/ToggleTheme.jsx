@@ -1,6 +1,7 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Sun from "./Icons/Sun";
+import Moon from "./Icons/Moon";
 
 const ToggleTheme = () => {
   const { theme, setTheme, systemTheme } = useTheme();
@@ -16,35 +17,21 @@ const ToggleTheme = () => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <>
-      <div className="flex justify-center">
-        {currentTheme === "dark" ? (
-          <button
-            className="bg-black-700 hover:bg-black w-auto rounded-md border-lightBlue border-2 p-1 transition-all"
-            onClick={() => setTheme("light")}
-          >
-            <Image
-              src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/theme-icons/sun.svg"
-              alt="logo"
-              height={30}
-              width={30}
-            />
-          </button>
-        ) : (
-          <button
-            className="bg-gray-100 w-auto rounded-md border-lightBlue border-2 p-1 hover:bg-gray-300 transition-all"
-            onClick={() => setTheme("dark")}
-          >
-            <Image
-              src="https://ucyrznwsgzfevzoiddmn.supabase.co/storage/v1/object/public/portfolio-assets/theme-icons/moon.svg"
-              alt="logo"
-              height={30}
-              width={30}
-            />
-          </button>
-        )}
-      </div>
-    </>
+    <button
+      className="flex items-center justify-center bg-surfaceAlt rounded-lg p-2 text-textSecondary hover:text-accent transition-colors"
+      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
+      aria-label={
+        currentTheme === "dark"
+          ? "Switch to light theme"
+          : "Switch to dark theme"
+      }
+    >
+      {currentTheme === "dark" ? (
+        <Sun height={20} width={20} />
+      ) : (
+        <Moon height={20} width={20} />
+      )}
+    </button>
   );
 };
 

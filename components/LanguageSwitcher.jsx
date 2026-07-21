@@ -20,7 +20,7 @@ export default function LanguageSwitcher() {
 
   return (
     <div
-      className="inline-flex items-center gap-0.5 rounded-lg bg-black/5 dark:bg-white/[0.08] p-1"
+      className="inline-flex items-center gap-0.5 rounded-lg bg-surfaceAlt p-1"
       aria-label="Selector de idioma"
     >
       {["es", "en"].map((lang, i) => (
@@ -29,7 +29,7 @@ export default function LanguageSwitcher() {
             <span
               key="divider"
               aria-hidden="true"
-              className="w-px h-3.5 bg-black/10 dark:bg-white/10 mx-0.5"
+              className="w-px h-3.5 bg-borderSubtle mx-0.5"
             />
           )}
           <button
@@ -39,8 +39,8 @@ export default function LanguageSwitcher() {
             className={[
               "text-xs font-semibold tracking-wide px-3 py-1.5 rounded-md transition-all duration-150",
               locale === lang
-                ? "bg-white dark:bg-white/15 text-gray-900 dark:text-white shadow-sm"
-                : "bg-transparent text-gray-400 dark:text-gray-500 hover:bg-black/5 dark:hover:bg-white/5 hover:text-gray-600 dark:hover:text-gray-300",
+                ? "bg-surface text-textPrimary shadow-sm"
+                : "bg-transparent text-textTertiary hover:bg-surface hover:text-textSecondary",
               isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer",
             ].join(" ")}
           >

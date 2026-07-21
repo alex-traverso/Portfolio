@@ -53,88 +53,96 @@ export default function Contact() {
     <div
       id="contact"
       onSubmit={openModal}
-      className="flex flex-col justify-center items-center w-full bg-lightThemeDarkToLight dark:bg-darkThemeDarkToLight pb-sectionBottom pt-sectionTop"
+      className="w-full bg-base py-16 md:py-24"
     >
-      <Titles>{t("title").toUpperCase()}</Titles>
+      <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
+        <Titles>{t("title").toUpperCase()}</Titles>
 
-      {modal && (
-        <section
-          className="bg-dark/50 min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed"
-          onClick={handleOverlayClick}
-        >
-          <div
-            ref={modalRef}
-            className="bg-dark duration-400 text-dark dark:text-white relative flex md:min-h-[350px] w-[500px] flex-col justify-center items-center gap-4 rounded-xl border border-lightGrey p-6 shadow-inner transition-all dark:shadow-zinc-700/40"
+        {modal && (
+          <section
+            className="bg-dark/50 min-h-full w-full z-50 top-0 left-0 flex justify-center items-center fixed"
+            onClick={handleOverlayClick}
           >
-            <h2 className="text-2xl">{t("successMessage")}</h2>
-            <Check width={70} height={70} stroke="#4399CE" />
-            <Button onClick={() => setModal(false)}>{t("close")}</Button>
-          </div>
-        </section>
-      )}
-
-      <motion.form
-        ref={ref}
-        style={{ y: scaleProgress, opacity: scrollYProgress }}
-        onSubmit={handleSubmit}
-        type="submit"
-        className="flex flex-col justify-center items-start lg:w-[45%] smm:w-[60%] mm:w-[80%] gap-3 text-black dark:text-white"
-      >
-        <input
-          required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
-          type="text"
-          value={name}
-          name="name"
-          placeholder={t("name")}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.name && (
-          <div className="lg:px-3 mm:px-2 text-red-500 text-center">
-            {errors.name}
-          </div>
+            <div
+              ref={modalRef}
+              className="bg-surface duration-400 text-textPrimary relative flex md:min-h-[350px] w-[500px] flex-col justify-center items-center gap-4 rounded-xl border border-borderSubtle p-6 shadow-inner transition-all dark:shadow-zinc-700/40"
+            >
+              <h2 className="text-xl md:text-2xl font-semibold text-textPrimary">
+                {t("successMessage")}
+              </h2>
+              <Check width={70} height={70} stroke="#4399CE" />
+              <Button variant="secondary" onClick={() => setModal(false)}>
+                {t("close")}
+              </Button>
+            </div>
+          </section>
         )}
 
-        <input
-          required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full rounded-xl"
-          type="text"
-          value={email}
-          name="email"
-          placeholder={t("email")}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.email && (
-          <div className="lg:px-3 mm:px-2 text-red-500 text-center">
-            {errors.email}
-          </div>
-        )}
-
-        <textarea
-          required
-          className="bg-white dark:bg-lightestGrey lg:p-3 mm:px-3 mm:py-2 w-full resize-none h-36 rounded-xl"
-          value={message}
-          name="message"
-          placeholder={t("message")}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {errors.message && (
-          <div className="lg:px-3 mm:px-2 text-red-500 text-center">
-            {errors.message}
-          </div>
-        )}
-
-        <Button
-          disabled={isButtonDisabled}
-          onClick={handleSubmit}
+        <motion.form
+          ref={ref}
+          style={{ y: scaleProgress, opacity: scrollYProgress }}
+          onSubmit={handleSubmit}
           type="submit"
+          className="flex flex-col justify-center items-start lg:w-[45%] smm:w-[60%] mm:w-[80%] gap-3 text-textPrimary"
         >
-          {t("send")}
-        </Button>
-      </motion.form>
+          <input
+            required
+            className="w-full bg-transparent border-b border-borderSubtle py-3 focus:border-accent focus:outline-none transition-colors placeholder:text-textTertiary"
+            type="text"
+            value={name}
+            name="name"
+            placeholder={t("name")}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {errors.name && (
+            <div className="lg:px-3 mm:px-2 text-red-500 text-center">
+              {errors.name}
+            </div>
+          )}
+
+          <input
+            required
+            className="w-full bg-transparent border-b border-borderSubtle py-3 focus:border-accent focus:outline-none transition-colors placeholder:text-textTertiary"
+            type="text"
+            value={email}
+            name="email"
+            placeholder={t("email")}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {errors.email && (
+            <div className="lg:px-3 mm:px-2 text-red-500 text-center">
+              {errors.email}
+            </div>
+          )}
+
+          <textarea
+            required
+            className="w-full bg-transparent border-b border-borderSubtle py-3 resize-none h-36 focus:border-accent focus:outline-none transition-colors placeholder:text-textTertiary"
+            value={message}
+            name="message"
+            placeholder={t("message")}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {errors.message && (
+            <div className="lg:px-3 mm:px-2 text-red-500 text-center">
+              {errors.message}
+            </div>
+          )}
+
+          <Button
+            variant="primary"
+            size="md"
+            disabled={isButtonDisabled}
+            onClick={handleSubmit}
+            type="submit"
+          >
+            {t("send")}
+          </Button>
+        </motion.form>
+      </div>
     </div>
   );
 }

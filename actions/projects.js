@@ -11,7 +11,10 @@ export async function getProjects(locale) {
       )
     `)
     .eq("active", true);
-  if (error) throw error;
+  if (error) {
+    console.error(error);
+    throw error;
+  }
 
   return data.map((project) => ({
     ...project,

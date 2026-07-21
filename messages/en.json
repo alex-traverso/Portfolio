@@ -9,12 +9,16 @@
   "banner": {
     "fullstackDeveloper": "Full Stack Developer",
     "multimediaDesigner": "Multimedia Designer",
+    "description": "I design and build complete web applications, from system architecture to interface detail.",
+    "viewProjects": "View projects",
     "contact": "Contact"
   },
   "aboutMe": {
     "title": "About Me",
-    "description": "Hello! My name is Alex Traverso and I am a Full Stack Developer. I am passionate about the world of development, technology, and design, and I enjoy working in a team. I am always willing to learn new things to develop professionally and be part of a team where I can contribute with my efforts and gain experience.",
-    "resume": "Download Resume"
+    "description1": "Hi! I'm Alex, a full stack developer. I've been doing this since 2021 and I get involved in the whole project: system architecture, backend logic, and the interface the user actually interacts with.",
+    "description2": "I trained in multimedia design, and that shapes how I work. I don't think about technical decisions separately from product decisions.",
+    "description3": "Right now I'm specializing in process automation: identifying repetitive manual tasks and solving them with software.",
+    "resume": "Download CV"
   },
   "skills": {
     "title": "Skills",
@@ -26,19 +30,21 @@
   },
   "services": {
     "title": "Services",
-    "uxuiTitle": "UX - UI Design",
-    "uxuiDescription": "Optimized interfaces for an exceptional user experience",
-    "uxuiAlt": "UX - UI Design",
-    "designTitle": "Web and Graphic Design",
-    "designDescription": "Modern and minimalist designs that enhance your brand",
-    "designAlt": "Web and Graphic Design",
-    "developmentTitle": "Web Application Development",
-    "developmentDescription": "Web application development with modern technologies (JavaScript, React, Next.js)",
-    "developmentAlt": "Web Application Development"
+    "webAppsTitle": "Custom web applications",
+    "webAppsDescription": "Complete platforms: authentication, admin panels, integrations and APIs. From architecture design to final interface.",
+    "webAppsAlt": "Custom web applications",
+    "websitesTitle": "Websites and admin panels",
+    "websitesDescription": "Websites with their own admin so you can manage your content without depending on anyone.",
+    "websitesAlt": "Websites and admin panels",
+    "automationTitle": "Process automation",
+    "automationDescription": "Identifying and solving repetitive manual tasks within your operation.",
+    "automationAlt": "Process automation"
   },
   "projects": {
     "title": "Projects",
-    "seeMore": "See more"
+    "seeMore": "See more",
+    "repository": "Repository",
+    "viewSite": "View site"
   },
   "contact": {
     "title": "Contact",
