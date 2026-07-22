@@ -18,8 +18,13 @@ export default function Project({
   return (
     <StaggerItem className="h-full">
       <div className="bg-surface rounded-xl border border-borderSubtle overflow-hidden hover:border-[var(--accent-40)] transition-colors h-full flex flex-col">
-        <div className="relative w-full aspect-[16/10]">
-          <Image src={src} alt={alt} fill className="object-cover" />
+        <div className="relative w-full overflow-hidden aspect-[16/10] group">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-cover scale-100 group-hover:scale-105 group-hover:rotate-1 transition-transform duration-150 ease-out"
+          />
         </div>
         <div className="p-6 flex flex-col gap-4 flex-1">
           <h3 className="text-xl md:text-2xl font-semibold text-textPrimary">
