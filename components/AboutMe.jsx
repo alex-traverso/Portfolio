@@ -11,7 +11,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <div id="aboutMe" className="w-full bg-base py-16 md:py-24">
+      <div id="aboutMe" className="w-full bg-base pt-24 md:pt-36">
         <div className="max-w-6xl mx-auto px-6 md:px-8 md:flex md:justify-center h-auto md:items-center md:self-center md:flex-col mm:flex mm:justify-end mm:flex-col">
           <Titles>{t("title").toUpperCase()}</Titles>
           <div className="flex lg:flex-row lg:items-start gap-12 transition-all mm:flex-col mm:justify-center mm:items-center mm:w-full">

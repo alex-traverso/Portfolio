@@ -6,7 +6,7 @@
     "projects": "Proyectos",
     "contact": "Contacto"
   },
-  "banner": {
+  "hero": {
     "fullstackDeveloper": "Desarrollador Full Stack",
     "multimediaDesigner": "Diseñador Multimedia",
     "description": "Diseño y desarrollo aplicaciones web completas, del sistema al detalle de interfaz.",

@@ -33,7 +33,7 @@ const NavBar = () => {
         transition={{ duration: 1 }}
         className="shadow-md w-full fixed top-0 left-0 z-50"
       >
-        <div className="md:flex items-center justify-between bg-surface py-4 md:px-10 px-7">
+        <div className="lg:flex items-center justify-between bg-surface py-4 lg:px-10 px-7">
           <div
             className="text-2xl cursor-pointer flex items-center
       text-gray-800"
@@ -59,19 +59,19 @@ const NavBar = () => {
 
           <div
             onClick={toggleMenu}
-            className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+            className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
           >
             <MenuIcons open={open} toggle={toggleMenu} />
           </div>
           <ul
-            className={`font-medium font-madeOuterRegular mm:flex mm:flex-col mm:items-end md:flex md:flex-row md:items-center md:pb-0 pb-12 absolute md:static mm:bg-surface md:bg-transparent md:z-auto z-[-1] right-0 w-[60%] mm:h-screen md:h-auto md:w-auto md:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-out ${
+            className={`font-medium font-madeOuterRegular mm:flex mm:flex-col mm:items-end lg:flex lg:flex-row lg:items-center lg:pb-0 pb-12 absolute lg:static mm:bg-surface lg:bg-transparent lg:z-auto z-[-1] right-0 w-[60%] mm:h-screen lg:h-auto lg:w-auto lg:pl-0 pr-10 last:pr-0 transition-all duration-500 ease-out ${
               open ? "top-20 " : "top-[-1000px]"
             }`}
           >
             {Links.map((link) => (
               <li
                 key={link.name}
-                className="md:mr-9 md:text-lg w-max md:my-0 mt-8 tracking-wide cursor-pointer"
+                className="lg:mr-9 lg:text-lg w-max lg:my-0 mt-8 tracking-wide cursor-pointer"
               >
                 <Link
                   activeClass="active"
@@ -86,14 +86,14 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
-            <div className="flex flex-col items-end space-y-4 mm:mt-4 md:mt-0 md:mr-0 lg:flex lg:flex-row lg:space-y-0 lg:items-center lg:gap-x-4">
+            <div className="flex flex-col items-end space-y-4 mm:mt-4 lg:mt-0 lg:mr-0 lg:flex lg:flex-row lg:space-y-0 lg:items-center lg:gap-x-4">
               <ToggleTheme />
               <LanguageSwitcher />
             </div>
           </ul>
           {open ? (
             <div
-              className="w-screen h-screen bg-black bg-opacity-50 md:hidden absolute z-[-10] top-0 left-0"
+              className="w-screen h-screen bg-black bg-opacity-50 lg:hidden absolute z-[-10] top-0 left-0"
               onClick={() => setOpen(false)}
             ></div>
           ) : null}

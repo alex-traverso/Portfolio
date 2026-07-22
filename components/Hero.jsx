@@ -4,22 +4,22 @@ import { useTranslations } from "next-intl";
 import { buttonClassName } from "./Button";
 import AnimatedShaderBackground from "./AnimatedShaderBackground";
 
-export default function Banner() {
-  const t = useTranslations("banner");
+export default function Hero() {
+  const t = useTranslations("hero");
 
   return (
     <>
       <div className="dark relative bg-dark w-full h-[calc(100vh_-_5rem)] mt-20 flex items-center justify-start overflow-hidden">
         <AnimatedShaderBackground className="absolute inset-0 z-0" />
-        <div className="absolute z-10 flex flex-col gap-6 justify-center items-start bg-black lg:px-sectionSides mm:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]">
-          <div>
+        <div className="absolute z-10 flex flex-col gap-6 justify-center items-center lg:items-start bg-black lg:px-sectionSides mm:px-sectionSidesMobile w-full h-full bg-opacity-[0.3]">
+          <div className="text-center lg:text-left w-full">
             <h1
-              className="text-white font-madeOuterBold font-bold md:text-7xl
-						mm:text-4xl m:text-[2.5rem] text-left mb-2"
+              className="text-white font-madeOuterBold font-bold text-4xl md:text-5xl lg:text-7xl
+						mb-2"
             >
               ALEX TRAVERSO
             </h1>
-            <h3 className="text-lightBlue font-madeOuterRegular lg:text-3xl md:text-2x1 mm:text-xl tracking-wide">
+            <h3 className="text-lightBlue font-madeOuterRegular lg:text-3xl md:text-2xl mm:text-xl tracking-wide">
               <Typewriter
                 options={{
                   strings: [t("fullstackDeveloper"), t("multimediaDesigner")],
@@ -32,7 +32,7 @@ export default function Banner() {
             </h3>
           </div>
 
-          <p className="text-textSecondary max-w-xl text-base md:text-lg leading-relaxed lg:text-left mm:text-center mm:px-4 lg:px-0">
+          <p className="text-textSecondary max-w-xl text-base md:text-lg leading-relaxed lg:text-left mm:text-center lg:px-0">
             {t("description")}
           </p>
 

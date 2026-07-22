@@ -38,7 +38,7 @@ export default function Skills({ skills = [] }) {
 
   return (
     <>
-      <section id="skills" className="w-full bg-base py-16 md:py-24">
+      <section id="skills" className="w-full bg-base pt-24 md:pt-36">
         <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
           <Titles>{t("title").toUpperCase()}</Titles>
           <MotionScrollTransition className="mb-8">

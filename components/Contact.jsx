@@ -53,7 +53,7 @@ export default function Contact() {
     <div
       id="contact"
       onSubmit={openModal}
-      className="w-full bg-base py-16 md:py-24"
+      className="w-full bg-base pt-24 md:pt-36 pb-24 md:pb-36"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
         <Titles>{t("title").toUpperCase()}</Titles>
