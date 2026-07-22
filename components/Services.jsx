@@ -10,7 +10,7 @@ export default function Services() {
 
   return (
     <>
-      <div id="services" className="w-full bg-base py-16 md:py-24">
+      <div id="services" className="w-full bg-base pt-24 md:pt-36">
         <div className="max-w-6xl mx-auto px-6 md:px-8 flex flex-col justify-center items-center">
           <div>
             <Titles>{t("title").toUpperCase()}</Titles>

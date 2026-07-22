@@ -1,5 +1,5 @@
 "use client";
-import Banner from "@/components/Banner";
+import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
@@ -19,7 +19,7 @@ export default function HomePageContainer({ projects, skills }) {
       transition={{ duration: 1.5 }}
     >
       <NavBar />
-      <Banner />
+      <Hero />
       <SocialMedia />
       <AboutMe />
       <Skills skills={skills} />
