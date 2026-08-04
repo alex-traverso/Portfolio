@@ -1,3 +1,5 @@
+import plugin from "tailwindcss/plugin";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -49,11 +51,33 @@ export default {
         m: "375px",
         xs: "480px",
       },
+      keyframes: {
+        clampedTextIn: {
+          from: { opacity: "0", transform: "scale(0.98)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        // Entry only: the resting state is the default, so the panel stays
+        // readable even if the animation never runs.
+        clampedTextIn: "clampedTextIn 120ms ease-out",
+      },
       fontFamily: {
         madeOuterRegular: ["var(--font-madeOuterRegular)"],
         madeOuterBold: ["var(--font-madeOuterBold)"],
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // Only where hovering actually works, used to scope truncation to devices
+    // that can reveal the full text on hover.
+    //
+    // This is a variant and not a `screens` entry on purpose: a single object
+    // (`raw`) value in `screens` flips Tailwind's `areSimpleScreens` to false,
+    // which drops the min-width sort from *every* breakpoint variant and lets
+    // `mm:` override `lg:`. See corePlugins.js `screenVariants`.
+    plugin(({ addVariant }) => {
+      addVariant("desktop", "@media (hover: hover) and (min-width: 768px)");
+    }),
+  ],
 };

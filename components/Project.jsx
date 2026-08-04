@@ -1,5 +1,6 @@
 import TechChip from "./TechChip";
 import Button from "./Button";
+import ClampedText from "./ClampedText";
 import { StaggerItem } from "./MotionStagger";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -30,9 +31,9 @@ export default function Project({
           <h3 className="text-xl md:text-2xl font-semibold text-textPrimary">
             {title}
           </h3>
-          <p className="text-sm text-textSecondary line-clamp-2">
+          <ClampedText className="text-sm text-textSecondary desktop:line-clamp-2">
             {description}
-          </p>
+          </ClampedText>
           <div className="flex flex-wrap gap-2">
             {tech.map((item) => (
               <TechChip key={item.name} skill={item} size="sm" />
